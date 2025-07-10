@@ -1,0 +1,33 @@
+@import "../../../../styles/variable";
+
+.mainContainer{
+    background: #FFEFFE;
+    padding: 30px;
+    border-radius: 20px;
+}
+.innerHeading {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 16px;
+  padding:15px 0px;
+}
+
+.linksGrid { 
+  font-weight: 600;
+  text-decoration: underline;
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+
+  a{
+     &:hover{
+    color: $orange-color;
+    text-underline: $orange-color;
+  }
+  }
+}
+
+

@@ -1,0 +1,151 @@
+@import "../../../styles/variable";
+
+
+.aboutSection{
+    width: 100%;
+    max-width:1200px;
+    margin:auto;
+    padding:100px 16px;
+}
+
+.heading{
+    margin-bottom: 40px;
+
+    h2{
+        font-size:35px;
+        line-height: 50px;
+        margin-bottom:20px;
+
+        span{
+            color:$orange-color;
+        }
+    }
+
+    p{
+        font-size: 15px;
+        line-height: 25px;
+        max-width:720px;
+
+    }
+}
+
+
+
+@media (max-width: 991px) {
+  .heading h2 {
+    font-size: 32px;
+    line-height: 45px;
+    text-align: center;
+  }
+
+  .heading p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media(max-width:768px){
+  .aboutSection{
+    padding:70px 16px;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .heading h2 {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .heading p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.desktopLayout {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.sidebar {
+  width: 320px;
+  font-size: 1.2rem;
+}
+
+.tabItem {
+  padding: 12px 20px;
+  cursor: pointer;
+  color: $black-color;
+  position: relative;
+  border-left: 1px solid #bebcbc;
+
+}
+
+.active {
+  color: $orange-color;
+  font-weight: bold;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background-color: $orange-color;
+  }
+}
+
+.content {
+  width: 100%;
+
+  @media (max-width: 768px) {
+    padding: 16px 0;
+    background-color: transparent;
+  }
+}
+
+
+.mobileAccordion {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.accordionItem {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.accordionHeader {
+  padding: 14px 18px;
+  background-color: $orange-color;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color:white;
+
+  
+}
+
+.accordionContent {
+ border-radius: 16px;
+}
