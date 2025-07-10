@@ -1,0 +1,43 @@
+@import "../../../styles/variable";
+
+.bannerSection {
+  min-height: 593.4px;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  background-color: #ff5141;
+  color: white;
+  text-align: center;
+}
+
+.content {
+  width: 100%;
+  padding: 0 20px;
+
+  h1 {
+    font-size: 48px;
+    font-weight: 600;
+
+    span {
+      color: $orange-color;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 32px;
+    }
+  }
+
+  p {
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: 400;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+}

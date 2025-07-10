@@ -4,6 +4,7 @@ import styles from './Work.module.scss';
 
 
 const projectData = [
+
     {
         id: 1,
         image: Images.work1,

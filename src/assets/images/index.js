@@ -39,6 +39,7 @@ import industry9 from "./Industry/Hospital.jpg";
 import industry10 from "./Industry/Travel1.jpg";
 import industry11 from "./Industry/Legal1.jpg";
 import industry12 from "./Industry/Construction1.jpg";
+import career from "./Career/career.webp";
 
 const images = {
     company1,
@@ -81,6 +82,7 @@ const images = {
     industry10,
     industry11,
     industry12,
+    career
 
 }
 

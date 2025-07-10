@@ -5,6 +5,7 @@ import Header from "@components/Header/Header";
 import Footer from "@components/Footer/Footer";
 import AppRoutes from "./routes/AppRoutes"; 
 import "@styles/main.scss";
+import AppRoutes from "./routes/AppRoutes";
 
 const App = () => {
   return (

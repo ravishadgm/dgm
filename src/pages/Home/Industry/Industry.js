@@ -1,20 +1,32 @@
 import React from 'react';
 import styles from "./Industry.module.scss";
 import Images from "../../../assets/images";
+import { MdOutlineHealthAndSafety } from "react-icons/md";
+import { FaShoppingBag } from "react-icons/fa";
+import { BsBank } from "react-icons/bs";
+import { MdOutlineSchool } from "react-icons/md";
+import { MdOutlineRealEstateAgent } from "react-icons/md";
+import { MdOutlinePrecisionManufacturing } from "react-icons/md";
+import { MdEmojiTransportation } from "react-icons/md";
+import { HiOutlineTicket } from "react-icons/hi2";
+import { BiDish } from "react-icons/bi";
+import { MdCardTravel } from "react-icons/md";
+import { SlNote } from "react-icons/sl";
+import { IoConstructOutline } from "react-icons/io5";
 
 const industries = [
-    { name: 'Healthcare', icon: Images.industry1 },
-    { name: 'Retail', icon: Images.industry2 },
-    { name: 'Finance', icon: Images.industry3 },
-    { name: 'Education', icon: Images.industry4 },
-    { name: 'Real-Estate', icon: Images.industry5 },
-    { name: 'Manufacturing', icon: Images.industry6 },
-    { name: 'Transportation', icon: Images.industry7 },
-    { name: 'Entertainment', icon: Images.industry8 },
-    { name: 'Hospitality', icon: Images.industry9 },
-    { name: 'Travel', icon: Images.industry10 },
-    { name: 'Legal', icon: Images.industry11 },
-    { name: 'Construction', icon: Images.industry12 },
+    { name: 'Healthcare', icon: <MdOutlineHealthAndSafety />, isComponent: true },
+    { name: 'Retail', icon: <FaShoppingBag />, isComponent: true },
+    { name: 'Finance', icon: <BsBank />, isComponent: true },
+    { name: 'Education', icon: <MdOutlineSchool />, isComponent: true },
+    { name: 'Real-Estate', icon: <MdOutlineRealEstateAgent />, isComponent: true },
+    { name: 'Manufacturing', icon: <MdOutlinePrecisionManufacturing />, isComponent: true },
+    { name: 'Transportation', icon: <MdEmojiTransportation />, isComponent: true },
+    { name: 'Entertainment', icon: <HiOutlineTicket />, isComponent: true },
+    { name: 'Hospitality', icon: <BiDish />, isComponent: true },
+    { name: 'Travel', icon: <MdCardTravel />, isComponent: true },
+    { name: 'Legal', icon: <SlNote />, isComponent: true },
+    { name: 'Construction', icon: <IoConstructOutline />, isComponent: true },
 ];
 
 const Industry = () => {
@@ -38,7 +50,11 @@ const Industry = () => {
                     <div className={styles.grid}>
                         {industries.map((item, index) => (
                             <div className={styles.card} key={index}>
-                                <img src={item.icon} alt={item.name} />
+                                {item.isComponent ? (
+                                    <div className={styles.icon}>{item.icon}</div>
+                                ) : (
+                                    <img src={item.icon} alt={item.name} />
+                                )}
                                 <p>{item.name}</p>
                             </div>
                         ))}
