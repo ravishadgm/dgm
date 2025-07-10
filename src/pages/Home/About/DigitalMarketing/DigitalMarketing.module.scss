@@ -6,13 +6,23 @@
     border-radius: 20px;
 }
 .innerHeading {
-  font-size: 20px;
+  font-size: 26px;
   font-weight: 600;
+
+  @media(max-width:1200px){
+    font-size: 20px;
+  }
 }
 
 .description {
-  font-size: 16px;
-  padding:15px 0px;
+  font-size: 18px;
+  line-height: 32px;
+  padding:30px 0px;
+
+  @media(max-width:1200px){
+    font-size: 20px;
+     padding:20px 0px;
+  }
 }
 
 .linksGrid { 
@@ -32,6 +42,9 @@
    }
 
   a{
+     font-size: 22px;
+     line-height: 30px;
+
      &:hover{
     color: $orange-color;
     text-underline: $orange-color;

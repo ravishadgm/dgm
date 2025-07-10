@@ -55,8 +55,12 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
   gap: 1.5rem;
+
+  @media(max-width:1370px){
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  }
 
   @media (max-width: 380px) {
     grid-template-columns: 1fr;
@@ -91,12 +95,20 @@
     opacity: 0;
     transform: translateY(100%);
     transition: all 0.3s ease;
-    font-size: 1.2rem;
-    font-weight: 600;
     height: 100%;
     display: flex;
     align-items: flex-end;
     text-align: left;
+
+    p{
+      font-size: 26px;
+       font-weight: 700;
+
+       @media(max-width:780px){
+        font-size: 24px;
+        padding:1rem;
+       }
+    }
   }
 
   &:hover .overlay {

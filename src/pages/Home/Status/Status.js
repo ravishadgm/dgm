@@ -20,15 +20,16 @@ const Status = () => {
                 </p>
                 <div className={styles.statsRow}>
                     {stats.map((item, index) => (
-                        <div key={index} className={styles.statCard}>
+                        <div
+                            key={index}
+                            className={`${styles.statCard} ${index !== stats.length - 1 ? styles.withBorder : ''}`}
+                        >
                             <h3>{item.number}</h3>
                             <p>{item.label}</p>
-                            {index !== stats.length - 1 && <div className={styles.divider} />}
                         </div>
                     ))}
                 </div>
             </div>
-
         </section>
     );
 };
