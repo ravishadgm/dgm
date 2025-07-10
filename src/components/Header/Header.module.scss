@@ -1,0 +1,222 @@
+@import "../../styles/variable";
+
+.header {
+  background-color: $white-color;
+  border-bottom: 1px solid #c9c9c9;
+  padding-left: var(--wrapspace);
+  padding-right: var(--wrapspace);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  .container {
+    max-width: calc(var(--wrap) + (var(--wrapspace) * 2));
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .logoDesktop {
+    img {
+      height: 40px;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .mobileTopbar {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 1rem 1.5rem;
+      background: $white-color;
+      z-index: 1001;
+      border-bottom: 1px solid $border-color;
+    }
+  }
+
+  .mobileClose {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    @media (min-width: 769px) {
+      display: none;
+    }
+  }
+
+  .mobileToggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+
+  .nav {
+    transition: all 0.3s ease;
+
+    ul {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 1rem;
+        font-weight: 500;
+        color: $black-color;
+        cursor: pointer;
+        padding: 0.5rem 0;
+
+        .dropdownToggle {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+        }
+
+        .dropdown {
+          position: absolute;
+          top: 2.5rem;
+          left: 0;
+          background: $gradient-blue;
+          color: $white-color;
+          border-radius: 12px;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          min-width: 200px;
+          padding: 0.5rem 0;
+          display: none;
+          z-index: 999;
+        }
+
+        &.showDropdown .dropdown {
+          display: block;
+        }
+      }
+
+      .contactBtn {
+        background-color: $orange-color;
+        color: $white-color;
+        padding: 0.6rem 1.5rem;
+        border: none;
+        border-radius: 12px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      position: fixed;
+      top: 64px;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 64px);
+      background: $white-color;
+      overflow-y: auto;
+      z-index: 1000;
+      transform: translateY(-100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+
+      ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        padding: 2rem 1.5rem;
+
+        li {
+          width: 100%;
+          flex-direction: column;
+          align-items: flex-start;
+
+          .dropdownToggle {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            svg {
+              margin-left: 0.25rem;
+              flex-shrink: 0;
+            }
+          }
+
+          .dropdown {
+            position: static;
+            margin-top: 0;
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            background: $gradient-blue;
+            color: $white-color;
+            border-radius: 10px;
+            width: 100%;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+
+            div {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 0.7rem 1rem;
+
+              &:hover {
+                background: rgba(255, 255, 255, 0.1);
+                color: $orange-color;
+              }
+            }
+          }
+
+          &.showDropdown .dropdown {
+            margin-top: 0.75rem;
+            padding: 0.5rem;
+            max-height: 500px;
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+
+    &.open {
+      @media (max-width: 768px) {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
