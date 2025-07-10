@@ -1,9 +1,9 @@
 import React from "react";
-
 import { BrowserRouter } from "react-router-dom";
+
 import Header from "@components/Header/Header";
 import Footer from "@components/Footer/Footer";
-// import Home from "@pages/Home";
+import AppRoutes from "./routes/AppRoutes"; 
 import "@styles/main.scss";
 import AppRoutes from "./routes/AppRoutes";
 
@@ -12,9 +12,8 @@ const App = () => {
     <BrowserRouter>
       <div className="app">
         <Header />
-        <main className="app-content">
-          <AppRoutes />
-        </main>
+        
+          <AppRoutes /> 
 
         <Footer />
       </div>

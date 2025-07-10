@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Header.module.scss';
 import { FiChevronDown, FiMenu, FiX } from 'react-icons/fi';
 import Logo from '@assets/images/header/header_logo.webp';
@@ -7,8 +8,15 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  const toggleDropdown = () => setDropdownOpen(prev => !prev);
-  const closeMobileMenu = () => setMobileMenuOpen(false);
+  const toggleDropdown = (e) => {
+    e.stopPropagation();
+    setDropdownOpen(prev => !prev);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+    setDropdownOpen(false);
+  };
 
   return (
     <header className={styles.header}>
@@ -19,35 +27,33 @@ export default function Header() {
 
         <nav className={`${styles.nav} ${mobileMenuOpen ? styles.open : ''}`}>
           <ul>
-            <li onClick={closeMobileMenu}>Home</li>
+            <li onClick={closeMobileMenu}>
+              <Link to="/">Home</Link>
+            </li>
 
-            <li
-              className={`${dropdownOpen ? styles.showDropdown : ''}`}
-              onClick={toggleDropdown}
-            >
-              <span className={styles.dropdownToggle}>
+            <li className={dropdownOpen ? styles.showDropdown : ''}>
+              <span
+                className={styles.dropdownToggle}
+                onClick={toggleDropdown}
+              >
                 Company <FiChevronDown size={14} />
               </span>
-              <div
-                className={`${styles.dropdown}`}
-                style={{
-                  maxHeight: dropdownOpen ? '500px' : '0',
-                  opacity: dropdownOpen ? 1 : 0,
-                  overflow: 'hidden',
-                  transition: 'all 0.3s ease'
-                }}
-              >
-                <div>Menu 1</div>
-                <div>Menu 2</div>
+              <div className={styles.dropdown}>
+                <Link to="/about-us" onClick={closeMobileMenu}>About Us</Link>
+                <Link to="/career" onClick={closeMobileMenu}>Career</Link>
               </div>
             </li>
 
             <li onClick={closeMobileMenu}>
-              Services
+              <Link to="/services">Services</Link>
             </li>
-            <li onClick={closeMobileMenu}>Blog</li>
-            <li>
-              <button className={styles.contactBtn}>Contact Us</button>
+            <li onClick={closeMobileMenu}>
+              <Link to="/blog">Blog</Link>
+            </li>
+            <li onClick={closeMobileMenu}>
+              <Link to="/contact">
+                <button className={styles.contactBtn}>Contact Us</button>
+              </Link>
             </li>
           </ul>
         </nav>

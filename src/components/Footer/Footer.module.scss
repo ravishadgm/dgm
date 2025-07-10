@@ -1,0 +1,159 @@
+.footer {
+  background-color: #05203c;
+  color: #fff;
+  padding: 50px 20px 30px; // base padding
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: calc(var(--wrap) + (var(--wrapspace) * 2));
+    width: 100%;
+    margin: auto;
+    gap: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 5px;
+  }
+
+  .column {
+    h4 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 10px;
+        font-size: 20px;
+        display: flex;
+        align-items: flex-start;
+
+        svg {
+          margin-right: 8px;
+          flex-shrink: 0;
+          margin-top: 2px;
+        }
+
+        a {
+          color: #fff;
+          text-decoration: none;
+          line-height: 28px;
+          font-weight: 300;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .logo {
+      max-width: 140px;
+      margin-bottom: 15px;
+    }
+
+    .socialIcons {
+      display: flex;
+      gap: 15px;
+
+      a {
+        color: #fff;
+        font-size: 18px;
+
+        &:hover {
+          color: #ff4e4e;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 13px;
+    color: #ccc;
+  }
+}
+
+/* =========================
+   Responsive Styles
+========================= */
+
+@media (max-width: 1024px) {
+  .footer {
+    padding: 60px 40px 40px; // Increased left/right padding
+
+    .container {
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .column {
+      flex: 0 0 calc(50% - 20px);
+
+      h4 {
+        font-size: 20px;
+      }
+
+      ul li {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+
+    .socialIcons a {
+      font-size: 16px;
+    }
+
+    .bottom {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px 30px 40px; 
+
+    .column {
+      flex: 0 0 100%;
+
+      h4 {
+        font-size: 18px;
+      }
+
+      ul li {
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+
+    .container {
+      gap: 30px;
+    }
+
+    .socialIcons a {
+      font-size: 16px;
+    }
+
+    .bottom {
+      font-size: 11px;
+    }
+  }
+}
