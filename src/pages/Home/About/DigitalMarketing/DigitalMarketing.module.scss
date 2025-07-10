@@ -1,0 +1,42 @@
+@import "../../../../styles/variable";
+
+.mainContainer{
+    background: #EFF4FF;
+    padding: 30px;
+    border-radius: 20px;
+}
+.innerHeading {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 16px;
+  padding:15px 0px;
+}
+
+.linksGrid { 
+  font-weight: 600;
+  text-decoration: underline;
+  width:50%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+   gap: 15px; 
+   
+   @media(max-width:768px){
+    width:70%;
+   }
+
+   @media(max-width:420px){
+    width:100%;
+   }
+
+  a{
+     &:hover{
+    color: $orange-color;
+    text-underline: $orange-color;
+  }
+  }
+}
+
+
