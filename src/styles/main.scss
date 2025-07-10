@@ -1,6 +1,10 @@
-
-@import './variable';
-@import './font';
+@import "./variable";
+@import "./font";
+:root {
+  --wrap: 1600px;
+  --wrapspace: 30px;
+  --paddingTopBottom:15px;
+}
 
 *,
 *::before,
@@ -8,12 +12,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
-html, body {
+html,
+body {
   height: 100%;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   background-color: $white-color;
   color: #111;
   scroll-behavior: smooth;
@@ -25,16 +29,24 @@ a {
   color: inherit;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
   border: none;
   background: none;
@@ -54,10 +66,17 @@ body {
 /* Custom Scrollbar (optional) */
 ::-webkit-scrollbar {
   width: 6px;
-  height:3px;
+  height: 3px;
 }
 ::-webkit-scrollbar-thumb {
   background-color: #ccc;
   border-radius: 4px;
 }
 
+.container {
+  max-width: calc(var(--wrap) + (var(--wrapspace) * 2));
+  width: 100%;
+  padding-left: var(--wrapspace);
+  padding-right: var(--wrapspace);
+  
+}

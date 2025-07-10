@@ -8,14 +8,11 @@ const Hero = () => {
         <div className={styles.left}>
           <span className={styles.badge}>Best Web Development Company In Ahmedabad, India</span>
           <h1>
-            We Develop Website That <br />
-            <span>Drives Your Online Business</span>
+           
+            <span>Digital Marketing Agency,</span>
           </h1>
           <p>
-            As a leading web development company in Ahmedabad, we build incredible websites that
-            correctly match your requirements. Our experience and expertise in delivering web
-            solutions for small businesses to enterprise businesses keeps the brand ahead of the
-            competition, even when the competition evolves!
+           Transforming Ideas into Digital Success
           </p>
           <button className={styles.cta}>Get A Quote</button>
         </div>

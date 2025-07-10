@@ -1,15 +1,18 @@
-@import '../../styles/variable';
+@import "../../styles/variable";
 
 .header {
   background-color: $white-color;
-  border-bottom: 1px solid #C9C9C9;
-  padding: 1rem 2rem;
+  border-bottom: 1px solid #c9c9c9;
+  padding-left: var(--wrapspace);
+  padding-right: var(--wrapspace);
   position: sticky;
   top: 0;
   z-index: 1000;
-
+  padding-top: 15px;
+  padding-bottom: 15px;
   .container {
-    max-width: 1400px;
+    max-width: calc(var(--wrap) + (var(--wrapspace) * 2));
+    width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
