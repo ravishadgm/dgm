@@ -1,54 +1,100 @@
 @import '../../../styles/variable';
 
-.certificateSection{
-  max-width: calc(var(--wrap) + (var(--wrapspace) * 2));
-  width: 100%;
-  margin:0 auto;
+.certificateSection {
   padding: 100px var(--wrapspace);
 }
 
-.heading{
-    margin-bottom: 40px;
+.heading {
+  margin-bottom: 40px;
+  max-width: calc(var(--wrap) + (var(--wrapspace) * 2));
+  width: 100%;
+  margin: 0 auto;
 
-    h2{
-        font-size:45px;
-        line-height: 60px;
+  h2 {
+    font-size: 45px;
+    line-height: 60px;
+    padding-bottom: 28px;
 
-        span{
-            color:$orange-color;
-        }
+    span {
+      color: $orange-color;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 25px;
+    padding-bottom: 28px;
+  }
+
+  @media (max-width: 991px) {
+    h2 {
+      font-size: 32px;
+      line-height: 45px;
+      text-align: center;
     }
 
-    p{
-        font-size: 18px;
-        line-height: 25px;
-
+    p {
+      text-align: center;
+      font-size: 16px;
+      line-height: 22px;
     }
+  }
+
+  @media (max-width: 576px) {
+    h2 {
+      font-size: 24px;
+      line-height: 34px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
 }
+
 .awardsSection {
   padding: 20px 0;
+  max-width: calc(var(--wrap) + (var(--wrapspace) * 2));
+  width: 100%;
+  margin: 0 auto;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 10px;
- 
-  
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center;
+
+  @media (max-width: 1440px) {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  @media (max-width: 991px) {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  @media (max-width: 576px) {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-content: center; 
+  }
 }
 
 .card {
-    border: 1px solid #CACACA;
-    border-radius: 12px;
-    padding: 25px 22px;
-    margin:10px;
-    width: 150px;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s all ease-in-out;
-    box-shadow: 0px 0px 35px 0px #00000012;
+  border: 1px solid #CACACA;
+  border-radius: 12px;
+  padding: 86px 49px;
+  width: 210px;
+  height: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s all ease-in-out;
+  box-shadow: 0px 0px 35px 0px #00000012;
 
   img {
     width: 100%;
@@ -58,57 +104,28 @@
   &:hover {
     transform: scale(1.05);
   }
-}
 
-@media (max-width: 991px) {
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    justify-items: center;
+  @media (max-width: 1440px) {
+    width: 180px;
+    height: 160px;
+    padding: 36px 29px;
   }
 
-  .card {
-    width: 120px;
-    height: 120px;
-    padding: 12px;
+  @media (max-width: 991px) {
+    width: 140px;
+    height: 140px;
+    padding: 20px;
   }
 
-  .heading h2 {
-    font-size: 32px;
-    line-height: 45px;
-    text-align: center;
-  }
-
-  .heading p {
-    text-align: center;
-    font-size: 16px;
-    line-height: 22px;
-  }
-}
-
-@media (max-width: 576px) {
-  .card {
+  @media (max-width: 576px) {
     width: 100px;
     height: 100px;
     padding: 10px;
   }
 
-  .heading h2 {
-    font-size: 24px;
-    line-height: 34px;
-  }
-
-  .heading p {
-    font-size: 14px;
-    line-height: 20px;
-  }
-}
-
-
-@media (max-width: 480px) {
-  .card {
+  @media (max-width: 480px) {
     width: 100px;
     height: 100px;
     padding: 10px;
-    
   }
 }

@@ -10,9 +10,8 @@
 .mainContainer {
   max-width: calc(var(--wrap) + (var(--wrapspace) * 2));
   width: 100%;
-  margin:0 auto;
+  margin: 0 auto;
   padding: 80px var(--wrapspace);
-
 
   @media (max-width: 768px) {
     padding: 60px 16px;
@@ -24,19 +23,23 @@
 }
 
 .heading {
+  width: 100%;
   font-size: 45px;
   font-weight: 400;
   line-height: 68px;
-  margin-bottom: 15px;
 
   span {
     color: $orange-color;
     font-weight: 600;
   }
 
+  @media (max-width: 1440px) {
+    font-size: 40px;
+    line-height: 52px;
+  }
+
   @media (max-width: 768px) {
     font-size: 32px;
-    line-height: 48px;
   }
 
   @media (max-width: 480px) {
@@ -46,7 +49,9 @@
 }
 
 .subtext {
+  width: 100%;
   font-size: 1.2rem;
+  margin-bottom: 45px;
 
   @media (max-width: 768px) {
     font-size: 1rem;
@@ -60,31 +65,33 @@
 .statsRow {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 60px;
-  margin-top: 60px;
+  gap: 30px;
+
+  @media (max-width: 1180px) {
+    flex-wrap: wrap;
+  }
 
   @media (max-width: 768px) {
     justify-content: center;
-    gap: 40px;
-  }
-
-  @media (max-width: 480px) {
-    gap: 30px;
+    gap: 20px;
   }
 }
 
 .statCard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  min-width: 120px;
+  width: 25%;
+  min-width: 200px;
+  padding-right: 30px;
+  
 
   h3 {
     font-size: 60px;
     line-height: 95.62px;
     font-weight: 700;
+
+    @media (max-width: 1440px) {
+      font-size: 50px;
+      line-height: 65px;
+    }
 
     @media (max-width: 768px) {
       font-size: 40px;
@@ -111,18 +118,23 @@
       font-size: 15px;
     }
   }
+
+  @media (max-width: 991px) {
+    width: 45%;
+    padding-right: 0;
+  }
+
+  @media (max-width: 576px) {
+    width: 100%;
+    padding-right: 0;
+  }
 }
 
-.divider {
-  content: "";
-  position: absolute;
-  background: rgba(255, 255, 255, 0.21);
-  height: 129px;
-  width: 2px;
-  top: 0px;
-  right: -85px;
 
-  @media (max-width: 768px) {
-    display: none;
+.withBorder {
+  border-right: 2px solid rgba(255, 255, 255, 0.21);
+
+  @media (max-width: 991px) {
+    border-right: none;
   }
 }
