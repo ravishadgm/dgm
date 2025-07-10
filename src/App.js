@@ -1,9 +1,9 @@
 import React from "react";
-
 import { BrowserRouter } from "react-router-dom";
+
 import Header from "@components/Header/Header";
 import Footer from "@components/Footer/Footer";
-import Home from "@pages/Home";
+import AppRoutes from "./routes/AppRoutes"; 
 import "@styles/main.scss";
 
 const App = () => {
@@ -11,7 +11,9 @@ const App = () => {
     <BrowserRouter>
       <div className="app">
         <Header />
-        <Home />
+        
+          <AppRoutes /> 
+
         <Footer />
       </div>
     </BrowserRouter>
