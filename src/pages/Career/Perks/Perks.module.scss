@@ -1,18 +1,33 @@
+@import "../../../styles/variable";
+
 .perksSection {
-  max-width: 1200px;
+ padding: 80px var(--wrapspace);
+}
+
+.container{
+  margin-bottom: 40px;
+  max-width: calc(var(--wrap) + (var(--wrapspace) * 2));
+  width: 100%;
   margin: 0 auto;
-  padding: 2rem;
 
   h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.4rem;
     font-weight: 500;
     margin-bottom: 2.5rem;
 
+    
+
+    @media(max-width:350px){
+        font-size:2.2rem;
+    }
+
     span {
-      color: #ef3f3e;
+      color: $orange-color;
+      font-weight:700;
     }
   }
+
 }
 
 .perksGrid {
@@ -31,30 +46,58 @@
 
 .perkCard {
   padding: 2rem;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @media(max-width:480px){
+    padding: 2rem 0rem;
+  }
 
   img {
     width: 48px;
     height: 48px;
     margin-bottom: 1rem;
     object-fit: contain;
+    
   }
 
   h3 {
-    font-size: 1rem;
+    font-size: 24px;
     font-weight: 600;
     margin-bottom: 0.5rem;
+    text-align: center;
+
+    @media(max-width:1440px){
+        font-size: 20px;
+    }
   }
 
   p {
-    font-size: 0.95rem;
+    font-size: 18px;
     color: #444;
+  text-align: center;
+
+  @media(max-width:1440px){
+        font-size: 16px;
+    }
   }
 }
 
 /* Draw internal dividers manually */
 .perksGrid {
-  & > :nth-child(2),
+  & > :nth-child(2){
+     border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+
+    @media(max-width: 987px) and (min-width: 769px) {
+        border-right: none;
+    }
+
+
+  }
+
   & > :nth-child(5) {
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
@@ -65,7 +108,6 @@
   }
 }
 
-/* Tablet: 2-column grid rules */
 @media (max-width: 987px) and (min-width: 769px) {
   .perksGrid {
     & > :nth-child(2n) {
@@ -78,11 +120,11 @@
 
     & > :nth-child(2n-1) {
       border-left: none;
+   
     }
   }
 }
 
-/* Mobile: 1-column rules */
 @media (max-width: 768px) {
   .perksGrid > * {
     border: none !important;
@@ -93,3 +135,9 @@
     }
   }
 }
+
+// @media(max-width:480px){
+//     .perkGrid>*{
+//         border-bottom:1px solid #ccc !important;
+//     }
+// }

@@ -1,18 +1,24 @@
 @import "../../../styles/variable";
 
 .openingsSection {
-  max-width: 1200px;
-  margin: auto;
-  padding: 60px 20px;
+ padding: 2rem var(--wrapspace);
+}
+
+.container{
+    max-width: calc(var(--wrap) + (var(--wrapspace) * 2));
+    width: 100%;
+    margin:0 auto;
 
   h2 {
-    font-size: 40px;
+    font-size: 42px;
     text-align: center;
     margin-bottom: 30px;
+    font-weight: 500 !important;
 
     span {
       color: $orange-color;
-      font-weight: 600;
+      font-weight:700 !important;
+    
     }
   }
 }
@@ -22,27 +28,31 @@
   border-radius: 12px;
   margin-bottom: 30px;
   overflow: hidden;
+  padding:30px;
 
   .header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 20px;
+    padding-bottom:10px;
     gap: 20px;
 
     h3 {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 10px;
+      font-size: 24px;
+      line-height: 32.78px;
+      margin-bottom: 12px;
     }
 
     .details {
       display: flex;
       gap: 30px;
+      
+
 
       div {
         font-size: 14px;
-        line-height: 1.4;
+        line-height: 30px;
+
       }
     }
 
@@ -52,37 +62,40 @@
       gap: 15px;
 
       .toggleBtn {
-        width: 40px;
-        height: 40px;
+        width: 45px;
+        height: 45px;
         background: transparent;
         border: 1px solid $orange-color;
         border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
-        color: $orange-color;
+        color: $blue-color;
         cursor: pointer;
       }
 
       .applyBtn {
         background-color: $orange-color;
-        color: #fff;
+        color: $white-color;
         border: none;
-        padding: 10px 25px;
+        padding: 14px 40px;
         border-radius: 8px;
         cursor: pointer;
 
         &:hover {
-          background-color: darken($orange-color, 10%);
+          background-color: darken($blue-color, 10%);
         }
       }
     }
   }
 
   .content {
-    background-color: #fff;
-    padding: 20px;
-    border-top: 1px solid #ddd;
+    padding: 10px 0px 30px 0px;
+
+    @media(max-width:480px){
+        padding: 10px 0px 0px 0px;
+    }
+   
 
     hr {
       margin: 10px 0 20px;
@@ -93,35 +106,40 @@
 
     p {
       margin-bottom: 8px;
-      font-size: 15px;
+      font-size: 20px;
     }
 
     .resHeading {
       color: $orange-color;
       font-weight: 600;
-      margin: 15px 0 10px;
+      margin: 25px 0 10px;
     }
 
     ul {
       list-style: none;
       padding-left: 0;
+      padding-top:10px;
+      padding-bottom:30px;
 
       li {
         position: relative;
         padding-left: 24px;
-        margin-bottom: 10px;
-        font-size: 14.5px;
+        margin-bottom: 20px;
+        
+        font-size: 18px !important;
 
         &::before {
           content: "";
-          width: 12px;
+          width: 18px;
           height: 12px;
+          align-items: center;
           border: 1px solid $orange-color;
-          border-radius: 50%;
-          display: inline-block;
+          border-radius: 30px;
+        //   display: inline-block;
           position: absolute;
           left: 0;
-          top: 4px;
+          top: 8.5px;
+          right:10px;
         }
       }
     }
@@ -134,28 +152,67 @@
       border-radius: 8px;
 
       a {
-        color: $orange-color;
+      font-weight: 600;
         text-decoration: none;
-        font-weight: 500;
+      
       }
     }
   }
 }
 
+@media(max-width:1200px){
+    .card{
+        padding:30px 30px 20px;
+    }
+}
+
 @media (max-width: 768px) {
   .card {
     .header {
-      flex-direction: column;
-      align-items: flex-start;
+     
+      align-items:center;
+    
+      
 
       .details {
-        flex-direction: column;
-        gap: 5px;
+        // flex-direction: column;
+        gap: 15px;
       }
 
       .actions {
-        align-self: flex-end;
+        // align-self: flex-end;
       }
     }
   }
+}
+
+@media(max-width:480px){
+    .card{
+        padding:20px;
+
+        .header{
+            padding-bottom: 0px;
+            justify-content: center;
+            gap: 1.5rem;
+        } 
+    }  
+}
+
+
+@media(max-width:375px){
+    .card{
+        padding:10px;
+
+         .header{
+        justify-content: center;
+        gap:0.5rem;
+    }
+    }
+
+   
+}
+
+
+.firstPara{
+    padding-top:15px;
 }
