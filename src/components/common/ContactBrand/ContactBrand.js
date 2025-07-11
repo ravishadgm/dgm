@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './ContactBrand.module.scss';
+import { motion } from 'framer-motion';
 
 const ContactBrand = ({
   heading = 'Ready to Make Your Brand the',
@@ -10,17 +11,52 @@ const ContactBrand = ({
 }) => {
   return (
     <section className={styles.contactBrand}>
-      <div className={styles.container}>
-        <div className={styles.content}>
-          <h2>
+      <motion.div
+        className={styles.container}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: 'easeOut' }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <motion.div
+          className={styles.content}
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, delay: 0.2, ease: 'easeOut' }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
             {heading} <span>{highlightedText}</span>
-          </h2>
-          <p>{description}</p>
-          <button className={styles.button} onClick={onClick}>
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            {description}
+          </motion.p>
+
+          <motion.button
+            className={styles.button}
+            onClick={onClick}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
             {buttonText}
-          </button>
-        </div>
-      </div>
+          </motion.button>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

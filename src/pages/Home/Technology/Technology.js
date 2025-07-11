@@ -29,6 +29,7 @@ import {
   SiPlausibleanalytics,
 } from "react-icons/si";
 import { FaShoePrints, FaGlobe, FaInternetExplorer } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 
 const categories = [
   "All",
@@ -81,6 +82,38 @@ const techIcons = [
   { icon: <FaInternetExplorer color="#1ebbee" />, category: "Analytics" },
 ];
 
+// Parent container stagger config
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.12, // one-by-one delay
+      delayChildren: 0.2,
+    },
+  },
+};
+
+// Zoom animation for each card
+const itemVariants = {
+  hidden: {
+    opacity: 0,
+    scale: 0.5,
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      ease: [0.175, 0.885, 0.32, 1.275], // elastic ease
+    },
+  },
+  exit: {
+    opacity: 0,
+    scale: 0.5,
+    transition: { duration: 0.3 },
+  },
+};
+
 const Technology = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
@@ -91,29 +124,70 @@ const Technology = () => {
 
   return (
     <section className={styles.technology}>
-      <div className={styles.container}>
-        <h2>We Are A Technology Services Partner</h2>
+      <motion.div
+        className={styles.container}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: false, amount: 0.3 }}
+      >
+        <motion.h2
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: false, amount: 0.3 }}
+        >
+          We Are A <span>Technology</span> Services Partner
+        </motion.h2>
 
-        <div className={styles.tabs}>
+        <motion.div
+          className={styles.tabs}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: false, amount: 0.3 }}
+        >
           {categories.map((cat) => (
-            <button
+            <motion.button
               key={cat}
               className={selectedCategory === cat ? styles.active : ""}
               onClick={() => setSelectedCategory(cat)}
+              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 300 }}
             >
               {cat}
-            </button>
+            </motion.button>
           ))}
-        </div>
+        </motion.div>
 
-        <div className={styles.grid}>
-          {filteredIcons.map((item, index) => (
-            <div key={index} className={styles.card}>
-              <div className={styles.icon}>{item.icon}</div>
-            </div>
-          ))}
-        </div>
-      </div>
+        <motion.div
+          className={styles.grid}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.3 }}
+        >
+          <AnimatePresence mode="wait">
+            {filteredIcons.map((item, index) => (
+              <motion.div
+                key={`${item.category}-${index}`}
+                className={styles.card}
+                variants={itemVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                whileHover={{
+                  scale: 1.1,
+                  boxShadow: "0 12px 25px rgba(0, 0, 0, 0.15)",
+                }}
+              >
+                <div className={styles.icon}>{item.icon}</div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
