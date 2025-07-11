@@ -44,9 +44,19 @@ export default function Header() {
               </div>
             </li>
 
-            <li onClick={closeMobileMenu}>
-              <Link to="/services">Services</Link>
+            <li className={dropdownOpen ? styles.showDropdown : ''}>
+              <span
+                className={styles.dropdownToggle}
+                onClick={toggleDropdown}
+              >
+                Services <FiChevronDown size={14} />
+              </span>
+              <div className={styles.dropdown}>
+                <Link to="/web-development" onClick={closeMobileMenu}>Web Development</Link>
+                <Link to="/app-development" onClick={closeMobileMenu}>App Development</Link>
+              </div>
             </li>
+
             <li onClick={closeMobileMenu}>
               <Link to="/blog">Blog</Link>
             </li>
