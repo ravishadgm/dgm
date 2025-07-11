@@ -38,3 +38,86 @@ p {
   font-weight: 500;
 }
 
+
+
+
+.trustedSection {
+  width:100%;
+  background-color: $gray-bg; 
+}
+
+.marqueeWrapper {
+    max-width: calc(var(--wrap) + (var(--wrapspace) * 2));
+    width: 100%;
+    margin:auto;
+    overflow: hidden;
+    text-align: center;
+    padding: 3rem var(--wrapspace);
+
+  @media(max-width:768px){
+    text-align: start;
+    padding: 3rem 0.5rem;
+      
+  }
+
+   @media(max-width:480px){
+    padding:2.5rem 0.5rem;
+  }
+}
+
+.marqueeContent {
+  display: flex;
+  gap: 5rem;
+  animation: scrollLeft 30s linear infinite;
+  width: max-content;
+
+
+  @media(max-width:480px){
+     gap: 0.9rem;
+  }
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-40%);
+  }
+}
+
+.logoCard {
+  flex: 0 0 auto;
+  width: 140px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media(max-width:480px){
+      width: 130px;
+      height: 60px;
+    }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+}
+
+.cardRow {
+  display: flex;
+    justify-content: center;
+  padding: 2rem 1rem 0;
+  overflow-x: auto;
+  gap: 25px;
+  &::-webkit-scrollbar {
+    height: 0;
+  }
+
+  @media (min-width: 1160px) {
+    overflow-x: unset;
+  }
+}
+

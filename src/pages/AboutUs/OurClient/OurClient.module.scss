@@ -1,0 +1,50 @@
+@import "../../../styles/variable";
+
+.clientSection {
+  padding: 0 20px 60px 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 40px;
+
+  h2 {
+    font-size: clamp(24px, 5vw, 40px);
+    font-weight: 600;
+
+    span {
+      color: #ff4c4c;
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #dbdbdb;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  transition: transform 0.3s ease;
+
+  img {
+    max-width: 100%;
+    max-height: 60px;
+    object-fit: contain;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}

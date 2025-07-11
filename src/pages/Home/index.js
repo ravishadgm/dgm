@@ -1,23 +1,23 @@
 import React from 'react'
 import Hero from "./Hero/Hero";
-import TrustedByBrands from './TrustedByBrands/TrustedByBrands'
 import Status from "./Status/Status";
 import Work from './Work/Work';
-import Certificates from './Certificates/Certificates';
 import Industry from './Industry/Industry';
 import About from './About/About';
 import Technology from './Technology/Technology'
+import SmallCard from '../../components/common/SmallCard/SmallCard';
+import CertifiedCompany from './CertifiedCompany/CertifiedCompany';
 import OurClients from './OurClients/OurClients';
 
 function index() {
   return (
     <>
       <Hero />
-      <TrustedByBrands />
+         <SmallCard  />
       <About />
       <Status />
       <Work />
-      <Certificates />
+      <CertifiedCompany />
       <Industry />
       <OurClients />
       <Technology />

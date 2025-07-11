@@ -28,6 +28,13 @@ import certificate5 from "./home/Certificates/certificates5.webp";
 import certificate6 from "./home/Certificates/certificates6.jpg";
 import certificate7 from "./home/Certificates/certificates7.jpg";
 import career from "./Career/career.webp";
+import hero_1 from "./AboutUs/hero/hero_1.webp";
+import hero_2 from "./AboutUs/hero/hero_2.webp";
+import hero_3 from "./AboutUs/hero/hero_3.webp";
+import client_1 from './AboutUs/client/client_1.webp';
+import client_2 from './AboutUs/client/client_2.webp';
+import client_3 from './AboutUs/client/client_3.webp';
+import client_4 from './AboutUs/client/client_4.webp';
 import icon1 from "./Career/first_icon.webp";
 import icon2 from "./Career/second-icon.webp";
 import icon3 from "./Career/third-icon.webp";
@@ -43,6 +50,13 @@ import memory6 from "./Career/Memory/MemorySix.webp";
 import memory7 from "./Career/Memory/Memory7.webp";
 
 const images = {
+    client_1,
+    client_2,
+    client_3,
+    client_4,
+    hero_2,
+    hero_3,
+    hero_1,
     company1,
     company2,
     company3,

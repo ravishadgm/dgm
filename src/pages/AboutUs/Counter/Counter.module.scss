@@ -1,0 +1,69 @@
+@import "../../../styles/variable";
+
+.counterSection {
+  padding: 0px var(--wrapspace) 69px var(--wrapspace);
+
+}
+
+.counterItem {
+  flex: 1 1 25%; // 4 per row
+  text-align: center;
+  padding: 70px 20px;
+
+  h3 {
+    font-size: clamp(32px, 6vw, 70px);
+    margin-bottom: 10px;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: clamp(14px, 2vw, 20px);
+    line-height: 1.4;
+    font-weight: 500;
+    margin-top: 6px;
+  }
+}
+
+.withBorder {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+// Tablet & Mobile (≤992px) — switch to 2 per row & remove radius
+@media (max-width: 992px) {
+  .counterSection {
+    border-radius: 0; 
+    padding: 0 16px;
+    margin-bottom: 50px;
+  }
+
+  .counterItem {
+    flex: 1 1 50%;
+    padding: 40px 15px;
+  }
+
+  .withBorder {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .counterItem:nth-last-child(1),
+  .counterItem:nth-last-child(2) {
+    border-bottom: none; // no border on last row
+  }
+}
+
+.innerCount{
+  display: flex;
+  flex-wrap: wrap;
+  
+  background-color: $blue-color;
+  color: #ffffff;
+  border-radius: 30px; // ✅ default radius
+  overflow: hidden;
+
+      max-width: calc(var(--wrap) + (var(--wrapspace) * 2));
+    width: 100%;
+    margin: 0 auto;
+  box-sizing: border-box;
+}
