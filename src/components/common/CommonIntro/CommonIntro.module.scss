@@ -1,0 +1,143 @@
+@import "../../../styles/variable";
+
+.introSection {
+  padding: 80px var(--wrapspace);
+  background-color: $white-color;
+
+  .container {
+    max-width: calc(var(--wrap) + (var(--wrapspace) * 2));
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  .left {
+    flex: 1;
+    max-width: 500px;
+
+    @media(max-width:768px){
+        max-width:600px;
+    }
+
+     @media (max-width: 480px) {
+      text-align: center;;
+    }
+
+    h2 {
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 1.4;
+      color: #111;
+
+      span {
+        color: $orange-color;
+        font-weight: bold;
+      }
+
+       @media (max-width: 1440px) {
+        font-size: 35px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 28px;
+      }
+    }
+
+   
+    .cta {
+      margin-top: 2rem;
+      padding: 0.8rem 2rem;
+      border: none;
+      background-color: $orange-color;
+      color: $white-color;
+      font-size: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+       @media(max-width:768px){
+        display: none;
+    }
+
+      @media(max-width:1440px){
+        padding:0.6rem 2.2rem;
+      }
+
+      &:hover {
+        opacity: 0.9;
+         background-color: $blue-color;
+      }
+    }
+  }
+
+  .right {
+    flex: 2;
+    padding-left: 4rem;
+    border-left: 1px solid #ccc;
+    
+
+    @media (max-width: 1040px) {
+      padding-left: 2rem;
+    }
+
+    
+    @media (max-width: 768px) {
+      padding-left: 0;
+      border-left: none;
+    }
+
+     
+    @media (max-width: 480px) {
+      text-align: center;;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 28px;
+      color: #333;
+      margin-bottom: 1.5rem;
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.mobileOnly {
+  display: none;
+  margin-top: 2rem;
+      padding: 0.8rem 2rem;
+      border: 1px solid $orange-color;
+      background: transparent;
+      color: $orange-color;
+      font-size: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+
+  @media (max-width: 768px) {
+    display: inline-block;
+    margin-top: 1rem;
+
+  }
+
+   @media (max-width: 480px) {
+    text-align: center;
+  }
+
+   &:hover {
+        opacity: 0.9;
+         background-color: $blue-color;
+         border:1px solid $blue-color;
+         color: $white-color;
+      }
+}
