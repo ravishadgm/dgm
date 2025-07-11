@@ -49,6 +49,16 @@ import memory5 from "./Career/Memory/MemoryFive.webp";
 import memory6 from "./Career/Memory/MemorySix.webp";
 import memory7 from "./Career/Memory/Memory7.webp";
 import webHero from "./services/webdevelopment/HeroImage.webp";
+import webPortfolio from "./services/webdevelopment/PortfolioImg.webp";
+import webSecondPortfolio from "./services/webdevelopment/PortfolioSecondImg.webp";
+import webThirdPortfolio from "./services/webdevelopment/PortfolioThirdImg.webp";
+import img1 from "./services/webdevelopment/logo.webp";
+import img2 from "./services/webdevelopment/social.webp";
+import img3 from "./services/webdevelopment/video.webp";
+import img4 from "./services/webdevelopment/Vector.webp";
+import img5 from "./services/webdevelopment/ppt.webp";
+import img6 from "./services/webdevelopment/Motion.webp";
+
 
 const images = {
     client_1,
@@ -101,7 +111,15 @@ const images = {
     memory6,
     memory7,
     webHero,
-
+    webPortfolio,
+    webSecondPortfolio,
+    webThirdPortfolio,
+    img1,
+    img2,
+    img3,
+    img4,
+    img5,
+    img6
 
 }
 

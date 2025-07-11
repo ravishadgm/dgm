@@ -4,6 +4,10 @@
   padding: 80px var(--wrapspace);
   background-color: $white-color;
 
+  @media(max-width:600px){
+    padding :40px var(--wrapspace);
+  }
+
   .container {
     max-width: calc(var(--wrap) + (var(--wrapspace) * 2));
     width: 100%;
@@ -46,7 +50,7 @@
       }
 
       @media (max-width: 768px) {
-        font-size: 28px;
+        font-size: 30px;
       }
     }
 
@@ -136,6 +140,7 @@
 
    &:hover {
         opacity: 0.9;
+        
          background-color: $blue-color;
          border:1px solid $blue-color;
          color: $white-color;

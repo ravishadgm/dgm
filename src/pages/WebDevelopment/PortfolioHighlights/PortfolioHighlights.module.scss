@@ -1,0 +1,45 @@
+@import '../../../styles/variable';
+
+.portfolioHighlights {
+  .mobileSlider {
+    margin-top: 0; 
+  }
+
+  .scrollContainer {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+    height: 100%;        
+    margin-bottom: -4px;  
+
+    &::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $orange-color;
+      border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #eee;
+    }
+  }
+
+  .scrollSlide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+
+    display: flex;
+    flex-direction: column;
+
+    height: auto;
+
+    & > * {
+      flex: 1;
+      height: 100%;
+    }
+  }
+}
