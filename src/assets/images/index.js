@@ -41,6 +41,7 @@ import memory4 from "./Career/Memory/MmeoryFour.webp";
 import memory5 from "./Career/Memory/MemoryFive.webp";
 import memory6 from "./Career/Memory/MemorySix.webp";
 import memory7 from "./Career/Memory/Memory7.webp";
+import webHero from "./services/webdevelopment/HeroImage.webp";
 
 const images = {
     company1,
@@ -84,7 +85,8 @@ const images = {
     memory4,
     memory5,
     memory6,
-    memory7
+    memory7,
+    webHero,
 
 
 }
