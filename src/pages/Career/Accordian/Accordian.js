@@ -41,52 +41,60 @@ const Accordian = () => {
 
     return (
         <section className={styles.openingsSection}>
-            <h2>
-                Current <span>Openings</span>
-            </h2>
-            {jobList.map((job, index) => (
-                <div className={styles.card} key={index}>
-                    <div className={styles.header}>
-                        <div>
-                            <h3>{job.title}</h3>
-                            <div className={styles.details}>
-                                <div>
-                                    <strong>Experience</strong><br />
-                                    {job.experience}
-                                </div>
-                                <div>
-                                    <strong>No. of Openings</strong><br />
-                                    {job.openings}
+            <div className={styles.container}>
+                <h2>
+                    Current <span>Openings</span>
+                </h2>
+                {jobList.map((job, index) => (
+                    <div className={styles.card} key={index}>
+                        <div className={styles.header}>
+                            <div>
+                                <h3>{job.title}</h3>
+                                <div className={styles.details}>
+                                    <div>
+                                        <strong>Experience</strong><br />
+                                        {job.experience}
+                                    </div>
+                                    <div>
+                                        <strong>No. of Openings</strong><br />
+                                        {job.openings}
+                                    </div>
                                 </div>
                             </div>
+                            <div className={styles.actions}>
+                                <button className={styles.toggleBtn} onClick={() => toggleAccordion(index)}>
+                                    {openIndex === index ? <FaChevronUp /> : <FaChevronDown />}
+                                </button>
+                                <button className={styles.applyBtn}>Apply Now</button>
+                            </div>
                         </div>
-                        <div className={styles.actions}>
-                            <button className={styles.toggleBtn} onClick={() => toggleAccordion(index)}>
-                                {openIndex === index ? <FaChevronUp /> : <FaChevronDown />}
-                            </button>
-                            <button className={styles.applyBtn}>Apply Now</button>
-                        </div>
-                    </div>
 
-                    {openIndex === index && (
-                        <div className={styles.content}>
-                            <hr />
-                            <p><strong>Job Title:</strong> {job.title}</p>
-                            <p><strong>Location:</strong> {job.location}</p>
-                            <p><strong>Experience:</strong> {job.experience}</p>
-                            <p className={styles.resHeading}>Key Responsibilities:</p>
-                            <ul>
-                                {job.responsibilities.map((point, i) => (
-                                    <li key={i}>{point}</li>
-                                ))}
-                            </ul>
-                            <div className={styles.contact}>
-                                Apply now on <a href="mailto:hr@indylogix.com">hr@indylogix.com</a> or <strong>(+91) 9687716161</strong>
+                        {openIndex === index && (
+                            <div className={styles.content}>
+                                <hr />
+                                <p className={styles.firstPara}><strong>Job Title:</strong> {job.title}</p>
+                                <p><strong>Location:</strong> {job.location}</p>
+                                <p><strong>Experience:</strong> {job.experience}</p>
+                                <p className={styles.resHeading}>Key Responsibilities:</p>
+                                <ul>
+                                    {job.responsibilities.map((point, i) => (
+                                        <li key={i}>{point}</li>
+                                    ))}
+                                </ul>
+                                <div className={styles.contact}>
+                                    Apply now on <a
+                                        href="https://mail.google.com/mail/?view=cm&to=hr@indylogix.com<"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        hr@indylogix.com
+                                    </a> or <a href="tel:+919687716161">+91 9687716161</a>
+                                </div>
                             </div>
-                        </div>
-                    )}
-                </div>
-            ))}
+                        )}
+                    </div>
+                ))}
+            </div>
         </section>
     );
 };

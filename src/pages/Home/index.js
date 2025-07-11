@@ -7,6 +7,7 @@ import Certificates from './Certificates/Certificates';
 import Industry from './Industry/Industry';
 import About from './About/About';
 import Technology from './Technology/Technology'
+import OurClients from './OurClients/OurClients';
 
 function index() {
   return (
@@ -18,7 +19,8 @@ function index() {
       <Work />
       <Certificates />
       <Industry />
-      <Technology/>
+      <OurClients />
+      <Technology />
     </>
   )
 }
