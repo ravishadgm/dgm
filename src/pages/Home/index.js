@@ -7,6 +7,7 @@ import About from './About/About';
 import Technology from './Technology/Technology'
 import SmallCard from '../../components/common/SmallCard/SmallCard';
 import CertifiedCompany from './CertifiedCompany/CertifiedCompany';
+import OurClients from './OurClients/OurClients';
 
 function index() {
   return (
@@ -18,7 +19,8 @@ function index() {
       <Work />
       <CertifiedCompany />
       <Industry />
-      <Technology/>
+      <OurClients />
+      <Technology />
     </>
   )
 }

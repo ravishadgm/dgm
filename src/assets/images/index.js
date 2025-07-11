@@ -1,44 +1,32 @@
 
-import google from "./trustedBrands/google.jpg";
-import bark from "./trustedBrands/bark.jpg";
-import clutch from "./trustedBrands/clutch.jpg";
-import GoodFirm from "./trustedBrands/GoodFirm.jpg";
-import sortist from "./trustedBrands/sortist.jpg";
-import company1 from "./trustedBrands/Google-Partners.jpg";
-import company2 from "./trustedBrands/Shopify-Partners.jpg";
-import company3 from "./trustedBrands/Bing-ads.jpg";
-import company4 from "./trustedBrands/techimply.jpg";
-import company5 from "./trustedBrands/BNI-Connect.jpg";
-import company6 from "./trustedBrands/gesia.jpg";
-import company7 from "./trustedBrands/Business.jpg";
-import company8 from "./trustedBrands/Meta.jpg";
-import company9 from "./trustedBrands/Forbes.jpg";
-import company10 from "./trustedBrands/yourStory.jpg";
-import work1 from "./Work/FirstWork.jpg";
-import work2 from "./Work/SecondWork.jpg";
-import work3 from "./Work/ThirdWork.jpg";
-import work4 from "./Work/FourthWork.jpg";
-import work5 from "./Work/FifthWork.jpg";
-import work6 from "./Work/SixthWork.jpg";
-import certificate1 from "./Certificates/certificates1.jpg";
-import certificate2 from "./Certificates/certificates2.jpg";
-import certificate3 from "./Certificates/certificates3.jpg";
-import certificate4 from "./Certificates/certificates4.jpg";
-import certificate5 from "./Certificates/certificates5.webp";
-import certificate6 from "./Certificates/certificates6.jpg";
-import certificate7 from "./Certificates/certificates7.jpg";
-import industry1 from "./Industry/Health.jpg";
-import industry2 from "./Industry/Retail1.jpg";
-import industry3 from "./Industry/Finance.jpg";
-import industry4 from "./Industry/Education.jpg";
-import industry5 from "./Industry/RealState.jpg";
-import industry6 from "./Industry/Manufacture.jpg";
-import industry7 from "./Industry/Transportation.jpg";
-import industry8 from "./Industry/Entertainment.jpg";
-import industry9 from "./Industry/Hospital.jpg";
-import industry10 from "./Industry/Travel1.jpg";
-import industry11 from "./Industry/Legal1.jpg";
-import industry12 from "./Industry/Construction1.jpg";
+import google from "./home/trustedBrands/google.jpg";
+import bark from "./home/trustedBrands/bark.jpg";
+import clutch from "./home/trustedBrands/clutch.jpg";
+import GoodFirm from "./home/trustedBrands/GoodFirm.jpg";
+import sortist from "./home/trustedBrands/sortist.jpg";
+import company1 from "./home/trustedBrands/Google-Partners.jpg";
+import company2 from "./home/trustedBrands/Shopify-Partners.jpg";
+import company3 from "./home/trustedBrands/Bing-ads.jpg";
+import company4 from "./home/trustedBrands/techimply.jpg";
+import company5 from "./home/trustedBrands/BNI-Connect.jpg";
+import company6 from "./home/trustedBrands/gesia.jpg";
+import company7 from "./home/trustedBrands/Business.jpg";
+import company8 from "./home/trustedBrands/Meta.jpg";
+import company9 from "./home/trustedBrands/Forbes.jpg";
+import company10 from "./home/trustedBrands/yourStory.jpg";
+import work1 from "./home/Work/FirstWork.jpg";
+import work2 from "./home/Work/SecondWork.jpg";
+import work3 from "./home/Work/ThirdWork.jpg";
+import work4 from "./home/Work/FourthWork.jpg";
+import work5 from "./home/Work/FifthWork.jpg";
+import work6 from "./home/Work/SixthWork.jpg";
+import certificate1 from "./home/Certificates/certificates1.jpg";
+import certificate2 from "./home/Certificates/certificates2.jpg";
+import certificate3 from "./home/Certificates/certificates3.jpg";
+import certificate4 from "./home/Certificates/certificates4.jpg";
+import certificate5 from "./home/Certificates/certificates5.webp";
+import certificate6 from "./home/Certificates/certificates6.jpg";
+import certificate7 from "./home/Certificates/certificates7.jpg";
 import career from "./Career/career.webp";
 import hero_1 from "./AboutUs/hero/hero_1.webp";
 import hero_2 from "./AboutUs/hero/hero_2.webp";
@@ -47,6 +35,20 @@ import client_1 from './AboutUs/client/client_1.webp';
 import client_2 from './AboutUs/client/client_2.webp';
 import client_3 from './AboutUs/client/client_3.webp';
 import client_4 from './AboutUs/client/client_4.webp';
+import icon1 from "./Career/first_icon.webp";
+import icon2 from "./Career/second-icon.webp";
+import icon3 from "./Career/third-icon.webp";
+import icon4 from "./Career/fourth-icon.webp";
+import icon5 from "./Career/fifth-icon.webp";
+import icon6 from "./Career/sixth-icon.webp";
+import memory1 from "./Career/Memory/Memory1.webp";
+import memory2 from "./Career/Memory/MemoryTwo.webp";
+import memory3 from "./Career/Memory/MemoryThree.webp";
+import memory4 from "./Career/Memory/MmeoryFour.webp";
+import memory5 from "./Career/Memory/MemoryFive.webp";
+import memory6 from "./Career/Memory/MemorySix.webp";
+import memory7 from "./Career/Memory/Memory7.webp";
+
 const images = {
     client_1,
     client_2,
@@ -83,19 +85,21 @@ const images = {
     certificate5,
     certificate6,
     certificate7,
-    industry1,
-    industry2,
-    industry3,
-    industry4,
-    industry5,
-    industry6,
-    industry7,
-    industry8,
-    industry9,
-    industry10,
-    industry11,
-    industry12,
-    career
+    career,
+    icon1,
+    icon2,
+    icon3,
+    icon4,
+    icon5,
+    icon6,
+    memory1,
+    memory2,
+    memory3,
+    memory4,
+    memory5,
+    memory6,
+    memory7
+
 
 }
 

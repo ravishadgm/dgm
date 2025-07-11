@@ -11,8 +11,8 @@ const App = () => {
     <BrowserRouter>
       <div className="app">
         <Header />
-        
-          <AppRoutes /> 
+
+        <AppRoutes />
 
         <Footer />
       </div>

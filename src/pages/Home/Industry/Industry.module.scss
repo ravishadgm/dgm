@@ -1,12 +1,12 @@
 @import "../../../styles/variable";
 
 .industriesSection {
-  max-width: calc(var(--wrap) + (var(--wrapspace) * 2));
-  width: 100%;
-  margin:0 auto;
   padding: 2rem var(--wrapspace);
 
   .container {
+    max-width: calc(var(--wrap) + (var(--wrapspace) * 2));
+    width: 100%;
+    margin:0 auto;
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 2rem;

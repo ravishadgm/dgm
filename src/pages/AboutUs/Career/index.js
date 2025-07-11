@@ -2,7 +2,7 @@ import React from 'react'
 import Hero from "./Hero/Hero";
 import Accordian from './Accordian/Accordian';
 import Perks from './Perks/Perks';
-
+import TeamSlider from './TeamSlider/TeamSlider';
 
 function index() {
     return (
@@ -10,7 +10,7 @@ function index() {
             <Hero />
             <Perks />
             <Accordian />
-
+            <TeamSlider />
         </>
     )
 }
