@@ -1,7 +1,10 @@
 @import '../../../styles/variable';
 
 .certificateSection {
-  padding: 100px var(--wrapspace);
+  padding: 80px var(--wrapspace);
+   @media (max-width: 991px) {
+    padding: 50px var(--wrapspace);
+   }
 }
 
 .heading {
@@ -21,8 +24,8 @@
   }
 
   p {
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 20px;
+    line-height: 35px;
     padding-bottom: 28px;
   }
 
@@ -62,24 +65,24 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 0fr));
+  gap: 30px;
   justify-content: center;
 
   @media (max-width: 1440px) {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 0fr));
   }
 
   @media (max-width: 991px) {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(140px, 0fr));
   }
 
   @media (max-width: 576px) {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px,0fr));
   }
 
   @media (max-width: 480px) {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 0fr));
     justify-content: center; 
   }
 }

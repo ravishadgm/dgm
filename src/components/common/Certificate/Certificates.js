@@ -1,6 +1,7 @@
+// Certificates.jsx
 import React from 'react';
 import styles from "./Certificates.module.scss";
-import Images from "../../../assets/images";
+import Images from "@assets/images";
 
 const awards = [
     { id: 1, src: Images.certificate1, alt: 'Clutch' },
@@ -12,14 +13,12 @@ const awards = [
     { id: 7, src: Images.certificate7, alt: 'Forbes Agency' },
 ];
 
-const Certificates = () => {
-
-
+const Certificates = ({ headingTitle, headingDescription }) => {
     return (
         <section className={styles.certificateSection}>
             <div className={styles.heading}>
-                <h2>Certified Best <span>Digital Marketing Company</span><br /> in Ahemdabad</h2>
-                <p>It’s Not The Noise, But The Values We Add As Digital Marketing Agency In Ahmedabad, India</p>
+                <h2 dangerouslySetInnerHTML={{ __html: headingTitle }} />
+                <p dangerouslySetInnerHTML={{ __html: headingDescription }} />
             </div>
 
             <div className={styles.awardsSection}>
@@ -32,7 +31,7 @@ const Certificates = () => {
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default Certificates
+export default Certificates;

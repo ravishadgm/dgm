@@ -4,10 +4,9 @@
   background-color: $white-color;
   padding: 100px 20px;
   text-align: center;
-  border-bottom: 1px solid #ddd;
 
   @media (max-width: 768px) {
-    padding: 60px 20px; // 👈 Reduced top & bottom padding for mobile
+    padding: 60px 20px; 
   }
 
   .container {
@@ -64,4 +63,40 @@
       color: $white-color;
     }
   }
+
+.imageSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; // 👈 Allows images to wrap on smaller screens
+  gap: 16px;
+  padding: 28px 0;
+
+  img {
+    width: 100%;
+    max-width: 523px; // 👈 Images will shrink to fit smaller screens
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+
+    @media (max-width: 768px) {
+      max-width: 100%; // Full width in small devices if needed
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px 10px;
+    gap: 12px;
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      max-width: 90%; // Better for tiny mobile devices
+    }
+  }
+}
+
 }

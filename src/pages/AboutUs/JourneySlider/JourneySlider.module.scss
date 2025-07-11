@@ -1,0 +1,202 @@
+/* Global Box Sizing Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.journeySection {
+  max-width: 100%;
+  padding: 0px 0 60px 0;
+  position: relative;
+  background-color: #fff;
+}
+
+.journeyTitle {
+  text-align: center;
+  margin-bottom: 40px;
+
+  h2 {
+    font-size: clamp(24px, 5vw, 40px);
+    font-weight: 600;
+
+    span {
+      color: #ff4d4f;
+    }
+  }
+}
+
+.journeySwiper {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+
+  .swiper-pagination {
+    position: static;
+    margin-top: 40px;
+  }
+
+  .swiper-pagination-bullet {
+    background-color: transparent;
+    color: #ccc;
+    opacity: 1;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    margin: 0 15px;
+    font-size: 16px;
+    font-weight: 500;
+
+    &.swiper-pagination-bullet-active {
+      color: #000;
+      font-weight: 600;
+    }
+  }
+}
+
+.journeySlide {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #000;
+    z-index: 0;
+  }
+}
+
+.journeyLeft {
+  position: relative;
+  flex: 0 0 40%;
+  z-index: 2;
+
+  .stepTitle {
+    h3 {
+      position: absolute;
+      transform: translateY(-98%);
+      left: 97px;
+      border-left: 1px solid #000;
+      padding-left: 15px;
+      font-size: clamp(16px, 2vw, 18px);
+      font-weight: 600;
+      margin: 0;
+      line-height: 3.4;
+    }
+  }
+}
+
+.journeyContent {
+  flex: 1 1;
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 40px;
+  border-radius: 24px;
+  z-index: 2;
+  position: relative;
+  min-height: 255px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+
+  p {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+}
+
+.rightDiv {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+// .hasline styles
+.hasline {
+  position: absolute;
+  left: 86px;
+
+  p {
+    font-size: clamp(24px, 6vw, 55px);
+    line-height: clamp(32px, 8vw, 75px);
+    font-weight: 700;
+    margin: 0;
+  }
+}
+
+// Responsive Styles
+@media (max-width: 768px) {
+  .journeySection {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .journeySlide {
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 20px;
+    align-items: center;
+
+    &::before {
+      top: 20px;
+    }
+  }
+
+  .journeyLeft {
+    width: 100%;
+    flex: none;
+
+    .stepTitle h3 {
+      position: relative;
+      transform: none;
+      left: 0;
+      border-left: none;
+      padding-left: 0;
+      font-size: 16px;
+      line-height: 1.4;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+
+  .journeyContent {
+    padding: 20px;
+    border-radius: 16px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .rightDiv {
+    display: none;
+  }
+
+  .hasline {
+    position: relative;
+    left: auto;
+    margin: 0 auto 20px auto;
+    text-align: center;
+
+    p {
+      font-size: clamp(20px, 5vw, 32px);
+      line-height: 1.2;
+    }
+  }
+}
+    

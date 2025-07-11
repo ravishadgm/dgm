@@ -40,8 +40,21 @@ import industry10 from "./Industry/Travel1.jpg";
 import industry11 from "./Industry/Legal1.jpg";
 import industry12 from "./Industry/Construction1.jpg";
 import career from "./Career/career.webp";
-
+import hero_1 from "./AboutUs/hero/hero_1.webp";
+import hero_2 from "./AboutUs/hero/hero_2.webp";
+import hero_3 from "./AboutUs/hero/hero_3.webp";
+import client_1 from './AboutUs/client/client_1.webp';
+import client_2 from './AboutUs/client/client_2.webp';
+import client_3 from './AboutUs/client/client_3.webp';
+import client_4 from './AboutUs/client/client_4.webp';
 const images = {
+    client_1,
+    client_2,
+    client_3,
+    client_4,
+    hero_2,
+    hero_3,
+    hero_1,
     company1,
     company2,
     company3,
