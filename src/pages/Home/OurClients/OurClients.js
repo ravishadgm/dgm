@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './OurClients.module.scss'
 import TestimonialSection from '../../../components/common/TestimonialSlider/TestimonialSlider';
+import { motion } from 'framer-motion';
 
 const testimonials = [
     {
@@ -66,27 +67,68 @@ const testimonials = [
 
 
 ];
+const sectionVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1, ease: 'easeOut' },
+  },
+};
+
+const headingStagger = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const headingText = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: 'easeOut' },
+  },
+};
 
 const OurClients = () => {
-    return (
-        <section className={styles.ourClientSection}>
-            <div className={styles.heading}>
-                <h2>Our Valued  <span>Clients</span><br /> </h2>
-                <p>Discover The Brand’s Voice For Our Best Digital Marketing Services In Ahmedabad</p>
-            </div>
+  return (
+    <motion.section
+      className={styles.ourClientSection}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={sectionVariants}
+    >
+      <motion.div className={styles.heading} variants={headingStagger}>
+        <motion.h2 variants={headingText}>
+          Our Valued <span>Clients</span>
+        </motion.h2>
+        <motion.p variants={headingText}>
+          Discover The Brand’s Voice For Our Best Digital Marketing Services In Ahmedabad
+        </motion.p>
+      </motion.div>
 
-            <TestimonialSection
-                heading="Our Valued Clients"
-                subheading="Discover The Brand’s Voice For Our Best Digital Marketing Services In Ahmedabad"
-                testimonials={testimonials}
-            />
-        </section>
-    )
-}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.9, ease: 'easeOut', delay: 0.2 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <TestimonialSection
+          heading="Our Valued Clients"
+          subheading="Discover The Brand’s Voice For Our Best Digital Marketing Services In Ahmedabad"
+          testimonials={testimonials}
+        />
+      </motion.div>
+    </motion.section>
+  );
+};
 
-export default OurClients
-
-
+export default OurClients;
 
 
 

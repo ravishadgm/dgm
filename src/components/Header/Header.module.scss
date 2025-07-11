@@ -107,7 +107,7 @@
           position: absolute;
           top: 100%;
           left: 0;
-          background-color: #05203c;
+          background-color: $orange-color;
           border-radius: 8px;
           padding: 10px 0;
           opacity: 0;
@@ -197,7 +197,7 @@
             padding: 0;
             max-height: 0;
             overflow: hidden;
-            background: $gradient-blue;
+            background: $orange-color;
             color: $white-color;
             border-radius: 10px;
             width: 100%;

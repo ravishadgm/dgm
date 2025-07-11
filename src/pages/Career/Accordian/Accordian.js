@@ -33,7 +33,7 @@ const jobList = [
 ];
 
 const Accordian = () => {
-    const [openIndex, setOpenIndex] = useState(0); // Initially open first
+    const [openIndex, setOpenIndex] = useState(0);
 
     const toggleAccordion = (index) => {
         setOpenIndex(openIndex === index ? null : index);

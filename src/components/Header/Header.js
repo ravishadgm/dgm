@@ -6,16 +6,16 @@ import Logo from '@assets/images/header/header_logo.webp';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null); // 'company', 'services', or null
 
-  const toggleDropdown = (e) => {
+  const toggleDropdown = (menu) => (e) => {
     e.stopPropagation();
-    setDropdownOpen(prev => !prev);
+    setOpenDropdown((prev) => (prev === menu ? null : menu));
   };
 
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
-    setDropdownOpen(false);
+    setOpenDropdown(null);
   };
 
   return (
@@ -31,11 +31,8 @@ export default function Header() {
               <Link to="/">Home</Link>
             </li>
 
-            <li className={dropdownOpen ? styles.showDropdown : ''}>
-              <span
-                className={styles.dropdownToggle}
-                onClick={toggleDropdown}
-              >
+            <li className={openDropdown === 'company' ? styles.showDropdown : ''}>
+              <span className={styles.dropdownToggle} onClick={toggleDropdown('company')}>
                 Company <FiChevronDown size={14} />
               </span>
               <div className={styles.dropdown}>
@@ -44,11 +41,8 @@ export default function Header() {
               </div>
             </li>
 
-            <li className={dropdownOpen ? styles.showDropdown : ''}>
-              <span
-                className={styles.dropdownToggle}
-                onClick={toggleDropdown}
-              >
+            <li className={openDropdown === 'services' ? styles.showDropdown : ''}>
+              <span className={styles.dropdownToggle} onClick={toggleDropdown('services')}>
                 Services <FiChevronDown size={14} />
               </span>
               <div className={styles.dropdown}>
@@ -60,6 +54,7 @@ export default function Header() {
             <li onClick={closeMobileMenu}>
               <Link to="/blog">Blog</Link>
             </li>
+
             <li onClick={closeMobileMenu}>
               <Link to="/contact">
                 <button className={styles.contactBtn}>Contact Us</button>

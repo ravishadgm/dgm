@@ -10,6 +10,7 @@ import {
   FaHeadset,
   FaLightbulb,
 } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const advantages = [
   {
@@ -54,27 +55,79 @@ const advantages = [
   },
 ];
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40, scale: 0.9 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.6,
+      ease: 'easeOut',
+    },
+  },
+};
+
 const Advantages = () => {
   return (
     <section className={styles.advantages}>
-      <div className={styles.container}>
-        <h2 className={styles.heading}>
+      <motion.div
+        className={styles.container}
+        initial="hidden"
+        whileInView="visible"
+        variants={containerVariants}
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <motion.h2
+          className={styles.heading}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
           Advantages of <span>Working With Us</span>
-        </h2>
-        <p className={styles.subheading}>
-          Change is inevitable; growth is intentional. Our vision is to empower businesses to thrive in the digital arena and make a lasting impact.
-        </p>
+        </motion.h2>
 
-        <div className={styles.grid}>
+        <motion.p
+          className={styles.subheading}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          Change is inevitable; growth is intentional. Our vision is to empower
+          businesses to thrive in the digital arena and make a lasting impact.
+        </motion.p>
+
+        <motion.div className={styles.grid}>
           {advantages.map((item, i) => (
-            <div className={styles.card} key={i}>
+            <motion.div
+              className={styles.card}
+              key={i}
+              variants={cardVariants}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: '0 12px 25px rgba(0, 0, 0, 0.1)',
+              }}
+              whileTap={{ scale: 0.98 }}
+            >
               <div className={styles.icon}>{item.icon}</div>
               <h3>{item.title}</h3>
               <p>{item.desc}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
