@@ -14,28 +14,28 @@
   margin: 0 auto;
 
   h2 {
+    font-size: 42px;
     text-align: center;
-    font-size: 2.4rem;
-    font-weight: 500;
-    margin-bottom: 2.5rem;
-
-    
-
-        @media(max-width:780px){
-      font-size:35px;
-      margin-bottom: 0;
-    }
-
-     @media(max-width:480px){
-      font-size:30px;
-    }
+    margin-bottom: 30px;
+    font-weight: 500 !important;
 
     span {
       color: $orange-color;
-      font-weight:700;
+      font-weight: 700 !important;
+    }
+
+    @media (max-width: 1200px) {
+      font-size: 40px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 30px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 28px;
     }
   }
-
 }
 
 .perksGrid {

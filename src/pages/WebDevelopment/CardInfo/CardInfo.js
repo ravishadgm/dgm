@@ -4,6 +4,13 @@ import Images from '../../../assets/images/index';
 
 const cardData = [
     {
+        title: 'CMS Development',
+        description: 'Avail of a robust, easy-to-use, and responsive CMS platform with our CMS web development services. Our team can design results-driven platform that can integrate with existing/new management systems.',
+        icon: Images.img6,
+        hoverColor: '#edf3ff',
+        borderColor: '#cddaf4',
+    },
+    {
         title: 'WordPress Development',
         description: 'Want a website that is scalable, customizable, and SEO-friendly? Our WordPress web development services are here for you. Our team can build impeccable solutions assuring great outcomes.',
         icon: Images.img1,
@@ -16,13 +23,6 @@ const cardData = [
         icon: Images.img2,
         hoverColor: '#fff7ed',
         borderColor: '#ffca87',
-    },
-    {
-        title: 'Custom Web Development',
-        description: 'Stand out from your competitors and attract audience to your brand with our custom web development services. Our web solutions are feature-rich, scalable, and optimized for customer journey.',
-        icon: Images.img3,
-        hoverColor: '#EDFFFC',
-        borderColor: '#5CC3DA',
     },
     {
         title: 'Front-End Development',
@@ -39,12 +39,13 @@ const cardData = [
         borderColor: '#badc90',
     },
     {
-        title: 'CMS Development',
-        description: 'Avail of a robust, easy-to-use, and responsive CMS platform with our CMS web development services. Our team can design results-driven platform that can integrate with existing/new management systems.',
-        icon: Images.img6,
-        hoverColor: '#edf3ff',
-        borderColor: '#cddaf4',
+        title: 'Custom Web Development',
+        description: 'Stand out from your competitors and attract audience to your brand with our custom web development services. Our web solutions are feature-rich, scalable, and optimized for customer journey.',
+        icon: Images.img3,
+        hoverColor: '#EDFFFC',
+        borderColor: '#5CC3DA',
     },
+
 ];
 
 export default function CardInfo() {

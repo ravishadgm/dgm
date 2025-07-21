@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './Hero.module.scss';
 import HeroImage from '@assets/images/home/hero_image.webp';
+import { Link } from 'react-router-dom';
 
 const sectionVariants = {
   hidden: { opacity: 0, scale: 0.95 },
@@ -60,22 +61,24 @@ const Hero = () => {
       <div className={styles.container}>
         <div className={styles.left}>
           <motion.span className={styles.badge} variants={leftItemVariants}>
-            Best Web Development Company In Ahmedabad, India
+            Best Web & App Development Company In Surat, India
           </motion.span>
           <motion.h1 variants={leftItemVariants}>
-            <span>Digital Marketing Agency,</span>
+            <span>A Digital Agency </span>
           </motion.h1>
           <motion.p variants={leftItemVariants}>
-            Transforming Ideas into Digital Success
+            <span>of,</span> Inteligents & Creative People
           </motion.p>
-          <motion.button
-            className={styles.cta}
-            variants={buttonVariants}
-            whileHover="whileHover"
-            whileTap="whileTap"
-          >
-            Get A Quote
-          </motion.button>
+          <Link to="/about-us">
+            <motion.button
+              className={styles.cta}
+              variants={buttonVariants}
+              whileHover="whileHover"
+              whileTap="whileTap"
+            >
+              Explore Now
+            </motion.button>
+          </Link>
         </div>
 
         <motion.div className={styles.right} variants={imageVariants}>

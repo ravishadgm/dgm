@@ -1,0 +1,155 @@
+@import '../../../styles/variable';
+
+.sectionWrapper {
+  padding: 40px var(--wrapspace);
+
+  @media(max-width:480px){
+    padding:10px var(--wrapspace);
+  }
+}
+
+.topSection {
+  max-width: calc(var(--wrap) + (var(--wrapspace) * 2));
+  width: 100%;
+  margin: 0 auto;
+  
+  .heading{
+    display:flex;
+    align-items: start;
+ 
+    @media(max-width:1080px){
+        flex-direction: column;
+    }
+
+    h1 {
+      width:50%;
+      font-size: 45px;
+      line-height: 70px;
+      font-weight: 700;
+      padding-bottom: 40px;
+      color: $orange-color;
+      
+      @media (max-width: 1400px) {
+        font-size: 40px;
+      }
+
+        @media(max-width:1080px){
+            width:100%;
+            padding-bottom: 15px;
+        }
+
+      @media (max-width: 768px) {
+        font-size: 30px;
+        line-height: 40px;
+        padding-bottom: 10px;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 22px;
+        line-height: 30px;
+      }
+    }
+
+    p{
+        width:50%;
+        font-size: 18px;
+        
+
+        @media(max-width:1080px){
+          width:100%;
+        }
+
+        @media(max-width:768px){
+            font-size: 16px;
+        }
+    }
+  }
+}
+
+.images {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin:40px 0px;
+  
+
+  img {
+    width: 100%;
+    max-width: 48%;
+    height: auto;
+    border:2px solid #ccc;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+
+.bottomContent {
+  
+    .sectionBlock{
+        display: flex;
+        align-items: start;
+        margin-bottom:40px;
+
+        @media(max-width:768px){
+            flex-direction:column;
+            margin-bottom:20px;
+        }
+
+        @media(max-width:480px){
+            margin-bottom: 15px;
+        }
+        
+
+        .subTitle,.description{
+            width:50%;
+
+            @media(max-width:768px){
+                width:100%;
+
+            }
+        }
+
+        .subTitle{
+            font-size: 28px;
+            font-weight: 700;
+            color:$orange-color;
+
+            @media(max-width:480px){
+                font-size: 22px;
+            }
+        }
+        .description{
+            font-size: 18px;
+
+            .solutionHeading{
+                font-weight: 600;
+            }
+
+            @media(max-width:768px){
+                font-size: 16px;
+            }
+
+            p{
+                padding:10px 0px;
+            }
+        }
+  
+    }
+}
+
+

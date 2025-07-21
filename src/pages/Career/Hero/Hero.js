@@ -22,7 +22,7 @@ const Hero = () => {
           transition={{ duration: 0.7, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          Take A Career Leap At <span>IndyLogix</span>
+          Take A Career Leap At <span>DGMtech Solutions</span>
         </motion.h1>
 
         <motion.p
@@ -31,7 +31,7 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          Breathe, take the leap of faith, leave your mark with us!
+          Step in with passion, grow with purpose, and leave your legacy with us!
         </motion.p>
       </motion.div>
     </section>

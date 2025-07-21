@@ -1,0 +1,153 @@
+@import "../../../styles/variable"; 
+
+.contactSection {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 60px 20px;
+
+  .subHeading {
+    color: $border-color;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+
+    span{
+         color: $orange-color;
+    }
+  }
+
+  h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: $black-color;
+    margin-bottom: 40px;
+
+     span{
+         color: $orange-color;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 28px;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .row {
+    display: flex;
+    gap: 20px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      padding:0px 30px;
+    }
+
+    @media (max-width: 480px) {
+      padding:0px
+    }
+
+    input {
+      display: flex;
+      width:50%;
+      padding: 14px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #f4f5f8;
+      outline: none;
+
+     @media(max-width:768px){
+        width:100%;
+    }
+
+      &:focus {
+        border-color: $orange-color;
+      }
+    }
+  }
+
+  .content{
+     @media (max-width: 768px) {
+      padding:0px 30px;
+    }
+
+     @media (max-width: 480px) {
+      padding:0px
+    }
+  }
+
+  textarea {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f4f5f8;
+    resize: none;
+
+    
+
+
+    &:focus {
+      border-color: $orange-color;
+    }
+  }
+
+.buttonGroup {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+
+   @media (max-width: 380px) {
+      flex-direction: column;
+    }
+
+  button {
+    position: relative;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    color: $white-color;
+    background-color: $orange-color;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+  }
+
+  button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius:10px;
+    transition: opacity 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #e42b2b;
+  }
+
+  button:hover::before {
+    opacity: 0;
+  }
+}
+
+}
+
+.error {
+  color: $orange-color;
+  font-size: 13px;
+  margin-top: 4px;
+}
+

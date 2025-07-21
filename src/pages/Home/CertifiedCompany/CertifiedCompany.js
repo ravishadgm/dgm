@@ -4,8 +4,8 @@ import Certificates from '@components/common/Certificate/Certificates';
 
 const WhoWeAre = () => (
     <Certificates
-        headingTitle={`Certified Best <span>Digital Marketing Company</span><br /> in Ahemdabad`}
-        headingDescription="It’s Not The Noise, But The Values We Add As Digital Marketing Agency In Ahmedabad, India"
+        headingTitle={`Certified Best <span>Web & App Development Company</span><br/> in Surat`}
+        headingDescription="It’s not about making loud claims — it’s about delivering real value through every website, app, and digital solution we craft with purpose and precision."
     />
 );
 

@@ -4,10 +4,10 @@ import CountUp from "react-countup";
 import { motion } from "framer-motion";
 
 const stats = [
-  { id: 1, number: 53, suffix: "+", label: "Talented Brains" },
-  { id: 2, number: 8480, suffix: "+", label: "Hours of Work a Month" },
-  { id: 3, number: 2548, suffix: "+", label: "Projects Completed" },
-  { id: 4, number: 445, suffix: "+", label: "Clients Trusted Us" },
+  { id: 1, number: 10, suffix: "+", label: "Company Size" },
+  { id: 2, number: 360, suffix: "+", label: "Hours of Work a Month" },
+  { id: 3, number: 40, suffix: "+", label: "Projects Completed" },
+  { id: 4, number: 20, suffix: "+", label: "Clients Trusted Us" },
 ];
 
 const itemVariants = {
@@ -37,9 +37,8 @@ const Counter = () => {
             key={item.id}
             custom={index}
             variants={itemVariants}
-            className={`${styles.counterItem} ${
-              index !== stats.length - 1 ? styles.withBorder : ""
-            }`}
+            className={`${styles.counterItem} ${index !== stats.length - 1 ? styles.withBorder : ""
+              }`}
           >
             <h3>
               <CountUp

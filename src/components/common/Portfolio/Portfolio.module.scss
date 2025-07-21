@@ -22,13 +22,17 @@
     margin: 0 auto;
 
     h2 {
-        font-size: 2.4rem;
+        font-size: 40px;
         font-weight: 500;
         margin-bottom: 1.5rem;
-        color:#ffb8b1;
+        // color:#ffb8b1;
 
         @media(max-width:768px){
           font-size: 30px;;
+        }
+
+         @media(max-width:480px){
+          font-size: 28px;
         }
 
        
@@ -48,6 +52,7 @@
 
     @media (max-width: 768px) {
       flex-direction: column;
+      gap:0rem;
     }
 
      @media (max-width: 480px) {
@@ -90,14 +95,14 @@
       margin-bottom: 2rem;
 
       @media(max-width:1440x){
-        font-size: 14px;
+        font-size: 18px;
       }
     }
 
     .result{
         color:$orange-color;
         font-weight: 600;
-        font-size:16px;
+        font-size:18px;
         padding-bottom:22px;
     }
 
@@ -131,7 +136,7 @@
 
         h4 {
           font-size: 50px;
-          color: #ffb8b1;
+          // color: #ffb8b1;
 
             @media(max-width:1440px){
                 font-size: 35px;
@@ -146,7 +151,6 @@
 
         p {
           font-size: 18px;
-          color: #555;
 
            @media(max-width:1440px){
                 font-size: 16px;

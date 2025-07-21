@@ -13,7 +13,7 @@ function index() {
   return (
     <>
       <Hero />
-         <SmallCard  />
+      <SmallCard />
       <About />
       <Status />
       <Work />

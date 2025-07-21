@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Header.module.scss';
 import { FiChevronDown, FiMenu, FiX } from 'react-icons/fi';
-import Logo from '@assets/images/header/header_logo.webp';
+import Logo from '@assets/images/header/Header1.png';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -52,8 +52,12 @@ export default function Header() {
             </li>
 
             <li onClick={closeMobileMenu}>
-              <Link to="/blog">Blog</Link>
+              <Link to="/portfolio">Portfolio</Link>
             </li>
+
+            {/* <li onClick={closeMobileMenu}>
+              <Link to="/blog">Blog</Link>
+            </li> */}
 
             <li onClick={closeMobileMenu}>
               <Link to="/contact">

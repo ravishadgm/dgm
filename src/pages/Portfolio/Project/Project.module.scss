@@ -1,0 +1,68 @@
+@import '../../../styles/variable';
+
+.projectSection {
+  padding: 80px var(--wrapspace);
+
+  .container {
+    max-width: calc(var(--wrap) + (var(--wrapspace) * 2));
+    width: 100%;
+    margin: 0 auto;
+ }
+}
+
+.heading{
+    text-align: center;
+    padding-bottom: 80px;
+
+     h1 {
+      font-size: 45px;
+      font-weight: 500;
+      line-height: 70px;
+
+      span {
+            color: $orange-color;
+            font-weight: 600;
+      }
+
+      @media (max-width: 1400px) {
+        font-size: 40px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 30px;
+        line-height: 40px;
+        padding-bottom: 30px;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 22px;
+        line-height: 30px;
+      }
+    }
+
+    @media(max-width:768px){
+        padding-bottom:30px;
+    }
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 30px;
+
+  @media(max-width:1080px){
+    justify-content: center;
+    place-items: center;
+  }
+
+  @media(max-width:768px){
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap:20px;
+   
+  }
+
+  @media(max-width:480px){
+    gap:20px;
+  }
+}

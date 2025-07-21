@@ -15,8 +15,8 @@ function index() {
       <SmallCard />
       <Certificates
         headingTitle={`Who <span>We Are</span>`}
-        headingDescription={`Digital Marketing? We’ve got you covered, from pixels to profits. We are a team of creative and passionate digital marketers, dedicated to helping businesses thrive in the online world. From social media management to website design, we craft personalized solutions that drive results.<br/><br/>
-  Being ingenious is the only rule, not an exception. We are digital marketers inspired by innovation and excited about strategy execution to drive aimed numbers to our partners. Whether it’s consumers or B2B audiences in the interest of building awareness, lead generation, customer acquisition, and purchase continuity, we unify digital marketing and sales journeys to achieve the results and empower the brand. Our guiding mantra is—every business has the spirit of a start-up, all it needs is the soul of a powerhouse, and you can count on us like coffee in the morning!`}
+        headingDescription={`Technology? We’ve got it covered — from concept to code. We’re a passionate team of developers, designers, and thinkers dedicated to building smart digital solutions. From mobile apps to websites, we create tailored products that help businesses grow and scale.<br/><br/>
+  Being innovative is our foundation, not a choice. At DGMTech Solutions, we blend creativity with technology to craft meaningful digital experiences. Whether you're a startup or a growing brand, we turn ideas into real solutions — with clean design, solid code, and a start-up spirit that powers every project forward.`}
       />
       <Counter />
       <OurClient />

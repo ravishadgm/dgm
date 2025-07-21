@@ -20,11 +20,13 @@
       font-size: 24px;
       margin-bottom: 15px;
       font-weight: 600;
+
     }
 
     ul {
       list-style: none;
       padding: 0;
+
 
       li {
         margin-bottom: 10px;
@@ -43,6 +45,7 @@
           text-decoration: none;
           line-height: 28px;
           font-weight: 300;
+          
 
           &:hover {
             text-decoration: underline;
@@ -69,6 +72,9 @@
       a {
         color: #fff;
         font-size: 18px;
+        border:1px solid white;
+        border-radius:20px;
+        padding:10px;
 
         &:hover {
           color: #ff4e4e;

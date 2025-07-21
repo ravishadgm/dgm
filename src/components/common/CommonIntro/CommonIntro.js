@@ -6,6 +6,7 @@ const CommonIntro = ({
     highlightedTitle,
     secondTitle,
     buttonLabel,
+    buttonLink,
     mobileButtonLabel,
     paragraphs = [],
 }) => {
@@ -20,9 +21,11 @@ const CommonIntro = ({
                         {secondTitle}
                     </h2>
                     {buttonLabel && (
-                        <button className={styles.cta} >
-                            {buttonLabel}
-                        </button>
+                        <a href={buttonLink} className={styles.button}>
+                            <button className={styles.cta} >
+                                {buttonLabel}
+                            </button>
+                        </a>
                     )}
                 </div>
 

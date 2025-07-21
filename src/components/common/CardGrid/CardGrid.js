@@ -17,6 +17,7 @@ export default function CardGrid({ data = [] }) {
                             style={{
                                 "--hover-bg": card.hoverColor,
                                 "--hover-border": card.borderColor,
+                                "--icon-hover-bg": card.borderColor
                             }}
                         >
                             <div className={styles.iconWrapper}>

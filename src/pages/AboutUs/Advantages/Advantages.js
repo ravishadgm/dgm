@@ -105,8 +105,7 @@ const Advantages = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          Change is inevitable; growth is intentional. Our vision is to empower
-          businesses to thrive in the digital arena and make a lasting impact.
+          Success isn’t accidental — it’s engineered. We bring a sharp focus on technology, creativity, and performance to help your business grow in the digital world and stand out with confidence.
         </motion.p>
 
         <motion.div className={styles.grid}>

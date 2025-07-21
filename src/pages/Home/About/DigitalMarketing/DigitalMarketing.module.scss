@@ -28,17 +28,18 @@
 .linksGrid { 
   font-weight: 600;
   text-decoration: underline;
-  width:50%;
+  width:80%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
    gap: 15px; 
    
    @media(max-width:768px){
-    width:70%;
+    width:90%;
    }
 
-   @media(max-width:420px){
+   @media(max-width:480px){
     width:100%;
+    grid-template-columns: repeat(1, 1fr);
    }
 
   a{

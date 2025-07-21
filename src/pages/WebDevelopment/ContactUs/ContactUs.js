@@ -5,8 +5,9 @@ import { motion } from 'framer-motion';
 const ContactUs = ({
     heading = 'Connect',
     highlightedText = ' With Us!',
-    description = 'Be it a WordPress website, Shopify eStore, or custom web development, we have delivered results and growth to global businesses; make sure the next is yours. Schedule a call and contact our Website Development Services team to discuss your project!',
+    description = `Whether it's a custom-coded website, an eCommerce platform, or a full-scale business portal — we've helped brands go digital the right way. Let’s build your next powerful web solution together. Schedule a call with our Web Development team today!`,
     buttonText = 'Take Me There',
+    buttonLink = '/contact',
     onClick,
 }) => {
     return (
@@ -44,18 +45,22 @@ const ContactUs = ({
                             {description}
                         </motion.p>
 
-                        <motion.button
-                            className={styles.button}
-                            onClick={onClick}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.5 }}
-                            viewport={{ once: true }}
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                        >
-                            {buttonText}
-                        </motion.button>
+
+
+                        <a href={buttonLink}>
+                            <motion.button
+                                className={styles.button}
+                                onClick={onClick}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: 0.5 }}
+                                viewport={{ once: true }}
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                            >
+                                {buttonText}
+                            </motion.button>
+                        </a>
                     </motion.div>
                 </motion.div>
             </motion.div>
