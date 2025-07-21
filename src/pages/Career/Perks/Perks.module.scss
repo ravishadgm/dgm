@@ -2,6 +2,9 @@
 
 .perksSection {
  padding: 80px var(--wrapspace);
+  @media (max-width: 691px) {
+    padding: 40px var(--wrapspace) 20px var(--wrapspace);
+  }
 }
 
 .container{
@@ -18,8 +21,13 @@
 
     
 
-    @media(max-width:350px){
-        font-size:2.2rem;
+        @media(max-width:780px){
+      font-size:35px;
+      margin-bottom: 0;
+    }
+
+     @media(max-width:480px){
+      font-size:30px;
     }
 
     span {
