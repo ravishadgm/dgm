@@ -112,12 +112,14 @@ p {
   padding: 2rem 1rem 0;
   overflow-x: auto;
   gap: 25px;
+      margin: auto;
+    width: 90%;
   &::-webkit-scrollbar {
     height: 0;
   }
 
-  @media (min-width: 1160px) {
-    overflow-x: unset;
+  @media (max-width: 1160px) {
+justify-content: flex-start;
   }
 }
 
