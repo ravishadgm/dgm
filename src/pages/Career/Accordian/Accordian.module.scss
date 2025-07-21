@@ -140,10 +140,14 @@
 
       li {
         position: relative;
-        padding-left: 24px;
+        padding-left: 35px;
         margin-bottom: 20px;
-
         font-size: 18px !important;
+
+
+        @media(max-width:480px){
+          padding-left: 30px;
+        }
 
         &::before {
           content: "";

@@ -28,6 +28,11 @@ const tools = [
     description: 'A backend-as-a-service platform by Google. Offers tools like Firestore DB, real-time syncing, authentication, and app performance monitoring.',
     icon: '🔥',
   },
+  {
+    title: 'FlutterFlow',
+    description: 'A low-code platform for building Flutter apps visually. Enables seamless UI design, Firebase integration, and fast app deployment with minimal coding.',
+    icon: '💠',
+  },
 ];
 
 const Technologies = () => {

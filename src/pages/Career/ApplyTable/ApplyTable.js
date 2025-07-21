@@ -64,7 +64,7 @@ const ApplyTable = () => {
             });
             if (file) payload.append('file', file);
 
-            await axios.post('http://localhost:5000/api/career', payload);
+            await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/career`, payload);
             toast.success('Application submitted successfully!');
             setFormData({
                 name: '',
@@ -174,7 +174,7 @@ const ApplyTable = () => {
                         <div className={styles.contactCard}>
                             <FaEnvelope />
                             <div>
-                                <strong>Chat to Sales</strong>
+                                <strong>Chat for Collaboration</strong>
                                 <p className={styles.miniContent}>Interested in switching? Speak to our friendly team.</p>
                                 <p>resilient.tech001@gmail.com</p>
                             </div>
@@ -205,7 +205,7 @@ const ApplyTable = () => {
                             <a href="https://github.com/" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
                             <a href="https://www.flickr.com/" target="_blank" rel="noopener noreferrer"><FaFlickr /></a>
                             <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
-                            <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>
+                            <a href="https://wa.me/919825805271" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>
                             <a href="https://www.skype.com/" target="_blank" rel="noopener noreferrer"><FaSkype /></a>
                         </div>
                     </div>

@@ -4,13 +4,14 @@ import styles from './Footer.module.scss';
 import {
   FaLinkedinIn,
   FaInstagram,
-  FaYoutube,
+  FaWhatsapp,
   FaFacebookF,
   FaXTwitter,
 } from 'react-icons/fa6';
 import { MdEmail, MdLocationOn } from 'react-icons/md';
 import { BsTelephoneFill } from 'react-icons/bs';
 import Logo from '@assets/images/header/Footer2.png';
+
 
 function Footer() {
   return (
@@ -22,18 +23,18 @@ function Footer() {
             DGMTech Solutions is a Surat-based IT company <br />specializing in custom web development,<br /> mobile app development, and UI/UX design.
           </p>
           <div className={styles.socialIcons}>
-            <a href="#"><FaLinkedinIn /></a>
-            <a href="#"><FaInstagram /></a>
-            <a href="#"><FaYoutube /></a>
-            <a href="#"><FaFacebookF /></a>
-            <a href="#"><FaXTwitter /></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+            <a href="https://wa.me/919825805271" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><FaXTwitter /></a>
           </div>
         </div>
 
         <div className={styles.column}>
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="/about-us">About</a></li>
             <li><a href="/career">Career</a></li>
             <li><a href="/portfolio">Portfolio</a></li>
@@ -44,9 +45,6 @@ function Footer() {
         <div className={styles.column}>
           <h4>Our Services</h4>
           <ul>
-            <li><a href="#">SEO Services</a></li>
-            <li><a href="#">SMO Service</a></li>
-            <li><a href="#">Facebook Ads</a></li>
             <li><a href="/web-development">Web Development</a></li>
             <li><a href="/app-development">App Development</a></li>
           </ul>

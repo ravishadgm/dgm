@@ -10,10 +10,10 @@ const Development = () => {
                     We build modern, responsive, and SEO-friendly websites that elevate your online presence. From custom CMS to full-stack web applications, our Surat-based developers deliver reliable, scalable, and visually impressive solutions.
                 </p>
                 <div className={styles.linksGrid}>
-                    <a href="#">Frontend Development</a>
-                    <a href="#">Backend Development</a>
-                    <a href="#">E-commerce Development</a>
-                    <a href="#">Custom Web Applications</a>
+                    <a>Frontend Development</a>
+                    <a>Backend Development</a>
+                    <a>E-commerce Development</a>
+                    {/* <a href="#">Custom Web Applications</a> */}
                 </div>
             </div>
         </>

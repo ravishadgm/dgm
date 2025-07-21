@@ -4,22 +4,23 @@ import Images from '../../../assets/images/index';
 
 const cardData = [
     {
-        title: 'CMS Development',
-        description: 'Avail of a robust, easy-to-use, and responsive CMS platform with our CMS web development services. Our team can design results-driven platform that can integrate with existing/new management systems.',
-        icon: Images.img6,
-        hoverColor: '#edf3ff',
-        borderColor: '#cddaf4',
-    },
-    {
-        title: 'WordPress Development',
-        description: 'Want a website that is scalable, customizable, and SEO-friendly? Our WordPress web development services are here for you. Our team can build impeccable solutions assuring great outcomes.',
+        title: 'UI/UX Design',
+        description: 'Create visually appealing and user-centric designs with our UI/UX services. We deliver intuitive, responsive, and accessible interfaces that enhance engagement and drive user satisfaction.',
         icon: Images.img1,
-        hoverColor: '#f9edff',
-        borderColor: '#d5b1ff',
+        hoverColor: '#fef7f1',
+        borderColor: '#f2c49b',
     },
     {
-        title: 'Shopify Development',
-        description: 'Get organic traffic and sales for your eCommerce business with our Shopify web development services. We can build effective and efficient eCommerce stores offering best user experience while shopping.',
+        title: 'App Development',
+        description: 'Accelerate your business with high-performance mobile and web applications. Our app development services focus on speed, scalability, and user experience for iOS, Android, and cross-platform apps.',
+        icon: Images.img6,
+        hoverColor: '#e6f7ff',
+        borderColor: '#99d6ff',
+    },
+    {
+        title: "Full-Stack Development",
+        description:
+            "Get complete web solutions with our full-stack development services. From front-end design to back-end functionality, we ensure seamless integration and maximum performance.",
         icon: Images.img2,
         hoverColor: '#fff7ed',
         borderColor: '#ffca87',
@@ -45,6 +46,7 @@ const cardData = [
         hoverColor: '#EDFFFC',
         borderColor: '#5CC3DA',
     },
+
 
 ];
 

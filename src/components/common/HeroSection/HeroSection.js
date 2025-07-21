@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './HeroSection.module.scss';
+import { useNavigate } from 'react-router-dom';
 
 const containerVariants = {
   hidden: { y: 10 },
@@ -46,9 +47,20 @@ const HeroSection = ({
   highlight,
   subtitle,
   buttonLabel,
+  buttonLink,
   image,
   onClick,
 }) => {
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    if (buttonLink) {
+      navigate(buttonLink);
+    } else if (onClick) {
+      onClick();
+    }
+  };
+
   return (
     <section className={styles.hero}>
       <motion.div
@@ -70,7 +82,7 @@ const HeroSection = ({
           {buttonLabel && (
             <motion.button
               className={styles.cta}
-              onClick={onClick}
+              onClick={handleButtonClick}
               variants={childVariants}
             >
               {buttonLabel}

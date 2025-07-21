@@ -63,7 +63,7 @@ const ApplyTable = () => {
 
             if (file) payload.append('file', file);
 
-            await axios.post('http://localhost:5000/api/project', payload);
+            await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/project`, payload);
 
             toast.success('Application submitted successfully!');
             setFormData({
