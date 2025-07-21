@@ -1,7 +1,6 @@
 @import '../../../styles/variable';
 
 .hero {
-  background-color: $white-color;
   padding: 70px var(--wrapspace);
 
   .container {
@@ -52,11 +51,12 @@
 
     h1 {
       font-size: 45px;
-      font-weight: 600;
+      font-weight: 500;
       line-height: 70px;
 
       span {
         color: $orange-color;
+        font-weight: 600;
       }
 
       @media (max-width: 1400px) {
@@ -69,8 +69,9 @@
       }
 
       @media (max-width: 480px) {
-        font-size: 22px;
+        font-size: 28px;
         line-height: 30px;
+        padding-top:20px;
       }
     }
 
@@ -93,6 +94,7 @@
       @media (max-width: 480px) {
         font-size: 16px;
         line-height: 24px;
+        padding-top:20px;
       }
     }
 

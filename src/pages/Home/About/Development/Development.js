@@ -5,16 +5,15 @@ const Development = () => {
     return (
         <>
             <div className={styles.mainContainer}>
-                <h2 className={styles.innerContainer}>Development</h2>
+                <h2 className={styles.innerContainer}>Web Development</h2>
                 <p className={styles.description}>
-                    We offer a wide range of custom software, web, and mobile development services tailored to
-                    meet your unique business needs. Whether you’re looking for frontend interfaces or backend
-                    systems, our experts deliver reliable, scalable, and maintainable code.
+                    We build modern, responsive, and SEO-friendly websites that elevate your online presence. From custom CMS to full-stack web applications, our Surat-based developers deliver reliable, scalable, and visually impressive solutions.
                 </p>
                 <div className={styles.linksGrid}>
-                    <a href="#">Web Development</a>
-                    <a href="#">Shopify Development</a>
-                    <a href="#">WordPress Developement</a>
+                    <a href="#">Frontend Development</a>
+                    <a href="#">Backend Development</a>
+                    <a href="#">E-commerce Development</a>
+                    <a href="#">Custom Web Applications</a>
                 </div>
             </div>
         </>

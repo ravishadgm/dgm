@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 import styles from './Status.module.scss';
 
 const stats = [
-  { number: 53, suffix: '+', label: 'Talented Brains' },
-  { number: 8480, suffix: '+', label: 'Hours of Work a Month' },
-  { number: 2548, suffix: '+', label: 'Projects Completed' },
-  { number: 445, suffix: '+', label: 'Clients Trusted Us' },
+  { number: 10, suffix: '+', label: 'Company Size' },
+  { number: 360, suffix: '+', label: 'Hours of Work a Month' },
+  { number: 40, suffix: '+', label: 'Projects Completed' },
+  { number: 20, suffix: '+', label: 'Clients Trusted Us' },
 ];
 
 const Status = () => {
@@ -65,7 +65,7 @@ const Status = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Numbers Speak For <span>Themselves</span>
+          Your Idea,<span> Our Expertise </span>
         </motion.h2>
 
         <motion.p
@@ -75,7 +75,7 @@ const Status = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          It’s The Magic Of Our Best Digital Marketing Services
+          It’s how we turn visions into digital products
         </motion.p>
 
         <div className={styles.statsRow}>
@@ -84,9 +84,8 @@ const Status = () => {
               key={index}
               data-index={index}
               ref={(el) => (cardRefs.current[index] = el)}
-              className={`${styles.statCard} ${
-                index !== stats.length - 1 ? styles.withBorder : ''
-              }`}
+              className={`${styles.statCard} ${index !== stats.length - 1 ? styles.withBorder : ''
+                }`}
               custom={index}
               initial="hidden"
               animate={visibleIndexes.includes(index) ? 'visible' : 'hidden'}

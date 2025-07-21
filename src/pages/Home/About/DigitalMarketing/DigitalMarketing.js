@@ -5,21 +5,16 @@ const DigitalMarketing = () => {
     return (
         <>
             <div className={styles.mainContainer}>
-                <h2 className={styles.innerHeading}>Digital Marketing</h2>
+                <h2 className={styles.innerHeading}>App Development</h2>
                 <p className={styles.description}>
-                    Do you plan to expand your brand? Make IndyLogix Solutions your strategic partner.
-                    As the leading digital marketing agency in Ahmedabad, we utilize industry trends
-                    and marketing skills to provide white-label and class-best digital marketing services,
-                    including SEO, content marketing, and social media services, to boost brand presence,
-                    attract new audiences, and improve client wallet share.
+                    Want to bring your app idea to life? Our team of expert developers builds secure, fast, and scalable mobile applications for Android and iOS. We provide end-to-end app development services — from UI/UX design and architecture to deployment and maintenance — tailored to your business needs.
                 </p>
                 <div className={styles.linksGrid}>
-                    <a href="#">SEO Services</a>
-                    <a href="#">Google Ads</a>
-                    <a href="#">Instagram Ads</a>
-                    <a href="#">Social Media Marketing</a>
-                    <a href="#">Facebook Ads</a>
-                    <a href="#">Content Marketing</a>
+                    <a href="#">Flutter Services</a>
+                    <a href="#">iOS App Development</a>
+                    <a href="#">Android App Development</a>
+                    <a href="#">Cross-Platform Apps</a>
+                    <a href="#">Custom Mobile Solutions</a>
                 </div>
             </div>
         </>

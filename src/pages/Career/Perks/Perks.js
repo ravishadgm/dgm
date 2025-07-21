@@ -104,7 +104,7 @@ export default function Perks() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Perks of working at <span>IndyLogix</span>
+          Perks of working at <span>DGMtech Solutions</span>
         </motion.h2>
 
         <div className={styles.perksGrid}>

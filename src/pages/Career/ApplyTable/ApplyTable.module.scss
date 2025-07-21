@@ -1,0 +1,282 @@
+@import "../../../styles/variable";
+
+.openingSection {
+  padding: 2rem var(--wrapspace);
+}
+
+.contactSection {
+  max-width: calc(var(--wrap) + (var(--wrapspace) * 2));
+  width: 100%;
+  margin: 0 auto;
+
+  h2 {
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 500 !important;
+
+    span {
+      color: $orange-color;
+      font-weight: 700 !important;
+    }
+
+    @media (max-width: 1200px) {
+      font-size: 40px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 30px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 28px;
+    }
+  }
+
+  .container {
+    display: flex;
+    gap: 25px;
+
+    @media (min-width: 1081px) {
+    align-items: stretch; 
+  }
+    
+     @media (max-width: 1080px) {
+      flex-direction: column;
+    }
+
+  }
+
+  .formBox {
+    width:65%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 32px;
+
+     @media (max-width: 1080px) {
+      width:100%;
+    }
+
+     @media(max-width:625px){
+        padding:20px;
+    }
+  }
+
+  .row {
+    display: flex;
+    gap: 20px;  
+
+    @media(max-width:768px){
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+  }
+
+  .inputGroup {
+    width:48%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom:20px;
+
+    @media(max-width:625px){
+        width:100%;
+        margin-bottom: 10px;
+    }
+
+    label {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+
+      span {
+        color: $orange-color;
+        margin-left: 2px;
+      }
+    }
+
+    input,
+    select,
+    textarea {
+      padding: 12px 14px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #f9fafb;
+      outline: none;
+
+      &:focus {
+        border-color: $orange-color;
+        background: #fff;
+      }
+    }
+
+   
+  }
+    .inputArea{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom:20px;
+
+        @media(max-width:768px){
+            margin-top:20px;
+        }
+
+        label {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 6px;
+
+            span {
+                color: $orange-color;
+                margin-left: 2px;
+            }
+        }
+
+        textarea {
+            resize: none;
+            min-height: 120px;
+            padding: 12px 14px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: #f9fafb;
+
+            &:focus {
+                border-color: $orange-color;
+                background: #fff;
+            }
+        }
+
+       
+    }
+  
+  .uploadBox {
+
+    label {
+        margin-bottom:5px;
+      border: 1px dashed $blue-color;
+      border-radius: 4px;
+      padding: 14px 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: $blue-color;
+      background: #eef1f8;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    .fileHint {
+      font-size: 12px;
+      color: #6b7280;
+    }
+  }
+
+  .submitButton {
+    align-self: flex-start;
+    margin-top: 20px;
+    padding: 10px 26px;
+    border: 1px solid $orange-color;
+    border-radius: 10px;
+    
+    color: $orange-color;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+      &:hover {
+        background-color: $orange-color;
+        color: $white-color;
+      }
+  }
+
+
+  .contactInfo {
+    width:35%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 32px;
+
+    @media (max-width: 1080px) {
+      width:100%;
+    }
+
+    @media(max-width:625px){
+        padding:20px;
+    }
+
+    h3 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    .contactCard {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 30px;
+
+      svg {
+        width: 42px;
+        height: 42px;
+        padding: 10px;
+        border-radius: 6px;
+        background: #ffedec;
+        color: $orange-color;
+      }
+
+      strong {
+        font-size: 16px;
+      
+      }
+
+      .miniContent{
+        font-size: 12px;
+         color: #6b7280;
+      }
+
+      p {
+        font-size: 14px;
+       margin-top:2px;
+      }
+    }
+
+    h4 {
+      padding-top: 20px;
+      margin-bottom: 16px;
+      border-top: 1px solid #ccc;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .socialIcons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+
+      a {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #ffedec;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        color: $orange-color;
+        transition: all 0.3s, color 0.3s;
+
+        &:hover {
+          background: $orange-color;
+          color: $white-color;
+        }
+      }
+    }
+  }
+}

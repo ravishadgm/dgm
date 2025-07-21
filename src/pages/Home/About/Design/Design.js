@@ -5,14 +5,14 @@ const Design = () => {
     return (
         <>
             <div className={styles.mainContainer}>
-                <h2 className={styles.innerHeading}>Design</h2>
+                <h2 className={styles.innerHeading}>UI/UX & Web Design</h2>
                 <p className={styles.description}>
-                    In the age of digital, don't let generative-AI capabilities overtake your enterprise-level efforts. Make IndyLogix, the client-featured digital design in Ahmedabad, turn your crude concept into a comprehensive solution. Our tech-enabled digital design team is experienced in keeping up with the evolving needs and pace of enterprise needs and delivering high-quality, results-driven design work at scale. Connect with our team to view the catalog of digital design services aimed at amplifying your brand identity.
+                    Great design is more than aesthetics — it’s about experience. Our creative team crafts user-centered designs that are intuitive, functional, and visually compelling. Whether it's an app interface or a website layout, we ensure every interaction counts.
                 </p>
                 <div className={styles.linksGrid}>
                     <a href="#">UI/UX Design</a>
-                    <a href="#">Graphic Design</a>
-                    <a href="#">Branding</a>
+                    <a href="#">Website Redesign</a>
+                    <a href="#">Mobile App UI</a>
                 </div>
             </div>
         </>

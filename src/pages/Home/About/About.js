@@ -5,16 +5,16 @@ import DigitalMarketing from './DigitalMarketing/DigitalMarketing';
 import Development from './Development/Development';
 import Design from './Design/Design';
 
-const tabs = ['Digital Marketing', 'Development', 'Design'];
+const tabs = ['App Development', 'Web Development', 'Design'];
 
 const About = () => {
-  const [activeTab, setActiveTab] = useState('Digital Marketing');
+  const [activeTab, setActiveTab] = useState('App Development');
 
   const renderContent = (tabName = activeTab) => {
     switch (tabName) {
-      case 'Digital Marketing':
+      case 'App Development':
         return <DigitalMarketing />;
-      case 'Development':
+      case 'Web Development':
         return <Development />;
       case 'Design':
         return <Design />;
@@ -23,37 +23,37 @@ const About = () => {
     }
   };
 
-const headingVariant = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, ease: 'easeInOut' },
-  },
-};
+  const headingVariant = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.7, ease: 'easeInOut' },
+    },
+  };
 
-const tabVariant = {
-  hidden: { opacity: 0, x: -10 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.6, ease: 'easeInOut' },
-  },
-};
+  const tabVariant = {
+    hidden: { opacity: 0, x: -10 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.6, ease: 'easeInOut' },
+    },
+  };
 
-const contentVariant = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, ease: 'easeInOut' },
-  },
-  exit: {
-    opacity: 0,
-    y: -10,
-    transition: { duration: 0.4, ease: 'easeInOut' },
-  },
-};
+  const contentVariant = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.7, ease: 'easeInOut' },
+    },
+    exit: {
+      opacity: 0,
+      y: -10,
+      transition: { duration: 0.4, ease: 'easeInOut' },
+    },
+  };
 
 
   return (
@@ -67,10 +67,10 @@ const contentVariant = {
       >
         <h2>
           White-Label Services for Results-Driven <br />
-          <span>Digital Marketing Solutions</span>
+          <span>App & Web Development Solutions</span>
         </h2>
         <p>
-          Whether it’s building your brand or creating content that converts traffic into sales in the world of digital marketing, results are important. We are one of the Best Digital Marketing Agency In Ahmedabad and we create digital marketing strategies that translate to significant success and business growth.
+          Whether you're launching a new digital product or upgrading your existing platforms, results matter. Based in Surat, we are a leading IT company delivering innovative app and web development services. Our expert team creates scalable, high-performing, and user-friendly digital solutions that drive business growth and deliver value to your customers.
         </p>
       </motion.div>
 

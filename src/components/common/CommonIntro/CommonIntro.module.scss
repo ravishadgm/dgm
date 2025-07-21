@@ -4,6 +4,10 @@
   padding: 80px var(--wrapspace);
   background-color: $white-color;
 
+  @media(max-width:600px){
+    padding :40px var(--wrapspace);
+  }
+
   .container {
     max-width: calc(var(--wrap) + (var(--wrapspace) * 2));
     width: 100%;
@@ -32,20 +36,24 @@
 
     h2 {
       font-size: 40px;
-      font-weight: 600;
+      font-weight: 500;
       line-height: 1.4;
       color: #111;
 
       span {
         color: $orange-color;
-        font-weight: bold;
+        font-weight: 600;
       }
 
        @media (max-width: 1440px) {
-        font-size: 35px;
+        font-size: 40px;
       }
 
       @media (max-width: 768px) {
+        font-size: 30px;
+      }
+
+      @media (max-width: 480px) {
         font-size: 28px;
       }
     }
@@ -136,6 +144,7 @@
 
    &:hover {
         opacity: 0.9;
+        
          background-color: $blue-color;
          border:1px solid $blue-color;
          color: $white-color;

@@ -1,0 +1,54 @@
+@import "../../../styles/variable";
+
+
+.bannerSection {
+  position: relative;
+  min-height: 593.4px;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  color: $white-color;
+  text-align: center;
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.75); 
+    z-index: 0; 
+  }
+
+  .content {
+    position: relative; 
+    z-index: 1;
+    width: 100%;
+    padding: 0 20px;
+
+    h1 {
+      font-size: 48px;
+      font-weight: 600;
+
+      span {
+        color: $orange-color;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 32px;
+      }
+    }
+
+    p {
+      margin-top: 16px;
+      font-size: 18px;
+      font-weight: 400;
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
+    }
+  }
+}

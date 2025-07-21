@@ -15,6 +15,7 @@ import { HiOutlineTicket } from "react-icons/hi2";
 import { BiDish } from "react-icons/bi";
 import { SlNote } from "react-icons/sl";
 import { IoConstructOutline } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 
 const industries = [
   { name: 'Healthcare', icon: <MdOutlineHealthAndSafety /> },
@@ -71,12 +72,10 @@ const Industry = () => {
             Industries <span>We Serve</span>
           </h2>
           <p>
-            As the leading digital marketing agency in Ahmedabad, we at IndyLogix partner with tech companies
-            in specialized industries to provide industry-specific digital marketing services and expertise.
-            Our innovative solutions are aimed at reducing the communication gap, fostering a customer-centric
-            relationship, and solving marketing challenges.
-          </p>
-          <button className={styles.contactBtn}>Contact Us</button>
+            At DGMTech Solutions, a Surat-based IT company, we partner with businesses across a wide range of industries to deliver tailored web, app, and design solutions. From tech startups to enterprise organizations, our mission is to bridge digital gaps, enhance user experiences, and drive growth through smart, industry-focused strategies. </p>
+          <Link to="/contact">
+            <button className={styles.contactBtn}>Contact Us</button>
+          </Link>
         </motion.div>
 
         {/* Right Grid Cards */}

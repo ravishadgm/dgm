@@ -43,8 +43,8 @@ export default function Hero() {
           custom={0}
           variants={textVariants}
         >
-          Impact-Driven Agency Shaping <br />
-          <span className={styles.highlight}>Digital Landscape</span> for Future
+          Results-Driven IT Experts Creating <br />
+          <span className={styles.highlight}>Next-Gen Web & App Solutions</span> for Future
         </motion.h1>
 
         <motion.p
@@ -55,9 +55,7 @@ export default function Hero() {
           custom={1}
           variants={textVariants}
         >
-          We are a digital-first, cutting-edge digital agency bridging the gap
-          between brand and audience for a growth-driven and sustainable
-          tomorrow!
+          At DGMTech Solutions, we combine strategy, design, and technology to build reliable, impactful digital products that drive business success.
         </motion.p>
 
         <motion.div

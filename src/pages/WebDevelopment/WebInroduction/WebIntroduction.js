@@ -5,12 +5,13 @@ const WebIntroduction = () => {
         <CommonIntro
             title="Trusted"
             highlightedTitle="Website Development Company"
-            secondTitle="Ahmedabad"
+            secondTitle="In Surat"
             buttonLabel="Contact Us"
+            buttonLink="/contact"
             mobileButtonLabel="Contact Us"
             paragraphs={[
-                `Indylogix is the best web development company in Ahmedabad, India, offering affordable and dependable web development services. Our expert web developers provide top-notch development solutions to contribute to the growth of your company. Our best-in-class web development services deliver one-stop solutions to help you increase your business by connecting individuals, strategies, and technologies. We design, develop, deploy, support, and maintain your website.`,
-                `As a leading website development company in Ahmedabad, we have a skilled team of web developers who dedicatedly work to provide unparalleled web development services to our clients. Our development team employs the best practices to create interesting, customized web solutions that serve the needs of businesses. We apply technical components to create high-quality, user-friendly, efficient, true, and secure websites by providing the best web solutions.`
+                `DGMTech Solutions is a trusted website development company in Surat, India, offering reliable and scalable web solutions tailored to your business goals. Our experienced team of developers delivers secure, high-performance websites that enhance user experience and accelerate growth. From startups to enterprises, we create web platforms that connect strategy, functionality, and design into a unified digital presence.`,
+                `As a leading web development company in Surat, we follow industry best practices to build custom, responsive, and SEO-friendly websites. Our developers combine technical expertise with creative problem-solving to deliver powerful, secure, and efficient websites. We handle everything from design and development to deployment and ongoing support, ensuring your digital success every step of the way.`
             ]}
         />
     );

@@ -20,7 +20,7 @@ export default function TeamSlider() {
             <div className={styles.sliderWrapper}>
                 <div className={styles.header}>
                     <h2>
-                        Moments of Celebration at <span>IndyLogix</span>
+                        Moments of Celebration at <span>DGMtech Solutions</span>
                     </h2>
                 </div>
                 <Swiper

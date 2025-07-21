@@ -22,8 +22,12 @@
       font-size:35px;
     }
 
-     @media(max-width:480px){
-      font-size:30px;
+    @media (max-width: 768px) {
+      font-size: 30px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 28px;
     }
 
     span {
