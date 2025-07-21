@@ -10,9 +10,9 @@ const Design = () => {
                     Great design is more than aesthetics — it’s about experience. Our creative team crafts user-centered designs that are intuitive, functional, and visually compelling. Whether it's an app interface or a website layout, we ensure every interaction counts.
                 </p>
                 <div className={styles.linksGrid}>
-                    <a href="#">UI/UX Design</a>
-                    <a href="#">Website Redesign</a>
-                    <a href="#">Mobile App UI</a>
+                    <a>UI/UX Design</a>
+                    <a>Website Redesign</a>
+                    <a>Mobile App UI</a>
                 </div>
             </div>
         </>

@@ -6,33 +6,34 @@ import styles from './Work.module.scss';
 const projectData = [
   {
     id: 1,
-    image: Images.work1,
-    title: 'Digital Marketing Agency Australia – Development, SEO & SMM',
+    image: Images.AppProject3,
+    title: 'Asite Field - Offline-ready app for construction data and field work.',
   },
   {
     id: 2,
-    image: Images.work2,
-    title: 'Gym Equipment Showroom - eCommerce Development, SEO & Google Ads',
+
+    image: Images.FarmHouseHub,
+    title: 'FarmHouseHub - Dual-module app for booking stays and managing farmhouse rentals.',
   },
   {
     id: 3,
-    image: Images.work3,
-    title: 'Home Improvement – Website Development, SEO & Google Ads',
+    image: Images.GenieDelivery,
+    title: 'GenieDelivery  - A dynamic cross-platform delivery solution for modern Indian consumers.',
   },
   {
     id: 4,
-    image: Images.work4,
-    title: 'Communication Tech & System Integration - Development & SEO',
+    image: Images.AddScale2,
+    title: 'AddScale - AI-Powered Digital Marketing Platform',
   },
   {
     id: 5,
-    image: Images.work5,
-    title: 'Industrial Power Generators - eCommerce Development & SEO',
+    image: Images.WebProject1,
+    title: 'Varn - Corporate website for India’s leading aluminum extrusion manufacturer.',
   },
   {
     id: 6,
-    image: Images.work6,
-    title: 'Home Building Company - Website Development & SEO',
+    image: Images.TeamFlow,
+    title: 'TeamFlow - Collaborative Team Workspace Platform',
   },
 ];
 

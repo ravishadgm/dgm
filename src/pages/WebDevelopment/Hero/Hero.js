@@ -9,7 +9,8 @@ const Hero = () => {
             title="We Develop Website  That "
             highlight=" Drives Business Growth"
             subtitle="At DGMTech Solutions, Surat’s leading web development company, we engineer high-performance, responsive, and scalable websites optimized for speed and reliability, empowering your brand to stay ahead in an ever-evolving digital ecosystem."
-            buttonLabel="Get A Quote"
+            buttonLabel="Start Your Web project"
+            buttonLink="/contact"
             image={Images.webHero}
             onClick={() => console.log('Quote button clicked')}
         />

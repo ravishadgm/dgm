@@ -8,34 +8,37 @@ import styles from './JourneySlider.module.scss';
 const journeyData = [
   {
     id: 1,
-    title: 'Setting the Foundation',
+    title: 'The Inception of DGM',
     description:
-      'Our journey began with three passionate individuals sharing a vision for pioneering web solutions. In a small workplace with enormous goals, we built the foundation for IndyLogix. Despite having few resources, the urge to work hard made us succeed while growing up.',
+      'DGM was founded by a small group of passionate developers with a shared goal — to create scalable and performance-driven web and app solutions. With limited resources but strong technical vision, we laid the foundation with our first client projects and an unwavering commitment to quality.',
   },
   {
     id: 2,
-    title: 'Team Augmentation And Addition of New Services',
+    title: 'Team Expansion & Core Tech Stack',
     description:
-      'As we grew to 12 members, we started focusing more on SEO and WordPress Development. The experience and expertise in SEO and WordPress became our major strength within a short period, which pushed us higher, consequently allowing us to undertake complex projects that are more ambitious than before.',
+      'As client demand increased, we expanded to a team with strong expertise in React, Node.js, MongoDB, and Flutter, FlutterFlow. We started delivering full-stack web and mobile app solutions, growing our reputation for solving complex technical challenges with clean, scalable code.',
   },
   {
     id: 3,
-    title: 'Expanding Global Reach',
-    description: 'Our dedication and quality of service opened doors to international markets. We began serving customers in over five countries, which made us enter the international market. It showed that we can adapt and stay committed to serving each market’s special needs while still keeping our organization’s global reputation strong.',
+    title: 'Stepping Into the Global Market',
+    description:
+      'With consistent delivery and client satisfaction, DGM entered international markets — serving clients in the US, UK, and Middle East. Our ability to understand business needs and deliver custom software helped us grow our global presence.',
   },
   {
     id: 4,
-    title: 'Building a Culture of Innovation',
+    title: 'R&D and Product Innovation',
     description:
-      'Our service portfolio was expanded to include UI/UX design and social media management in response to our clients’ changing needs. This not only helped to improve our skill set but also provided complete solutions that helped our customers increase their digital footprint and interact with users.',
+      'We began investing in internal R&D and explored SaaS products and enterprise-level applications. This phase encouraged our engineers to explore microservices, and emerging frontend frameworks, building a culture of technical exploration and innovation.',
   },
   {
     id: 5,
-    title: 'Achieved 700+ Project Completion',
+    title: 'Crossing 100+ Project Deliveries',
     description:
-      'A big achievement for us was finishing 700+ projects. Each project gave us new ideas every time...',
+      'With over 100+ successful web and app development projects delivered, DGM became a trusted tech partner for startups and enterprises. Each project strengthened our capabilities and taught us the importance of adaptability and long-term client relationships.',
   },
 ];
+
+
 
 const JourneySlider = () => {
   return (
@@ -61,7 +64,7 @@ const JourneySlider = () => {
                   <h3>{step.title}</h3>
                 </div>
                 <div className={styles.hasline}>
-                    <p>#{step.id}</p>
+                  <p>#{step.id}</p>
                 </div>
 
               </div>

@@ -51,6 +51,10 @@
 
 .projectSection {
   padding: 2rem 1rem;
+
+  @media(max-width:480px){
+    padding: 0rem 0rem;
+  }
 }
 
 .grid {
@@ -76,8 +80,12 @@
 
   img {
     width: 100%;
-    height: auto;
+    height: 280px;
     transition: transform 0.3s ease;
+
+    @media(max-width:768px){
+      height:240px;
+    }
   }
 
   &:hover img {
