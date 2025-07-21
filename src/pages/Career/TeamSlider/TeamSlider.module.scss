@@ -2,6 +2,9 @@
 
 .gallerySection {
   padding: 40px var(--wrapspace) 80px var(--wrapspace);
+   @media (max-width: 691px) {
+    padding: 20px var(--wrapspace);
+  }
 }
 
 .sliderWrapper {
@@ -16,7 +19,7 @@
     font-weight: 500 !important;
 
     @media(max-width:780px){
-      font-size:38px;
+      font-size:35px;
     }
 
      @media(max-width:480px){

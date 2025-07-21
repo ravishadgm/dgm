@@ -2,6 +2,9 @@
 
 .openingsSection {
   padding: 2rem var(--wrapspace);
+    @media (max-width: 691px) {
+    padding: 20px var(--wrapspace);
+  }
 }
 
 .container {
@@ -14,6 +17,13 @@
     text-align: center;
     margin-bottom: 30px;
     font-weight: 500 !important;
+       @media(max-width:780px){
+      font-size:35px;
+    }
+
+     @media(max-width:480px){
+      font-size:30px;
+    }
 
     span {
       color: $orange-color;
